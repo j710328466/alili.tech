@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hexo on Alili</title>
+    <link>https://alili.tech/tags/hexo/</link>
+    <description>Recent content in Hexo on Alili</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 13 Nov 2018 21:32:05 +0000</lastBuildDate>
+    
+	<atom:link href="https://alili.tech/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hexo Process Out of Memory 内存溢出问题</title>
+      <link>https://alili.tech/archive/c38d0045/</link>
+      <pubDate>Tue, 13 Nov 2018 21:32:05 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/c38d0045/</guid>
+      <description>hexo内存溢出问题 当hexo生成文章大概在1000左右的时候,便有可能出现该问题.
+FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - process out of memory  解决方法: # 找到hexo 命令的位置 which hexo  编辑hexo命令的bin文件的第一行为以下内容.
+#!/usr/bin/env node --max_old_space_size=8192  便暂时解决内存溢出的问题.
+hexo的性能 hexo的性能相对hugo确实差太多,同样1000+的页面,用hugo却只用了不到2s. 这让我开始开始犹豫是否要放弃使用hexo.</description>
+    </item>
+    
+    <item>
+      <title>Hexo的DTraceProviderBindings MODULE_NOT_FOUND问题</title>
+      <link>https://alili.tech/archive/e25431a8/</link>
+      <pubDate>Sun, 19 Feb 2017 21:32:05 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/e25431a8/</guid>
+      <description>最近在mac上安装Hexo,老是报错 DTraceProviderBindings MODULE_NOT_FOUND;
+第一种报错 报错命令如下:
+{ [Error: Cannot find module &#39;./build/Release/DTraceProviderBindings&#39;] code: &#39;MODULE_NOT_FOUND&#39; } { [Error: Cannot find module &#39;./build/default/DTraceProviderBindings&#39;] code: &#39;MODULE_NOT_FOUND&#39; } { [Error: Cannot find module &#39;./build/Debug/DTraceProviderBindings&#39;] code: &#39;MODULE_NOT_FOUND&#39; }  虽然hexo的生成 发布功能没有影响.但是每次运行命令的时候,就会报错.表示很不能忍;
+网上的普遍方法是:
+npm install hexo --no-optional  但是,我的电脑还是没有效果;
+最后我重装了 hexo-cli
+npm uninstall hexo-cli -g npm install hexo-cli -g  我的报错问题就解决了.
+第二种报错 { Error: Cannot find module &#39;./build/Release/DTraceProviderBindings&#39; at Function.Module._resolveFilename (module.js:469:15) at Function.Module._load (module.js:417:25) at Module.require (module.</description>
+    </item>
+    
+  </channel>
+</rss>

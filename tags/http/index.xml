@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Http on Alili</title>
+    <link>https://alili.tech/tags/http/</link>
+    <description>Recent content in Http on Alili</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 26 Jul 2017 16:14:25 +0000</lastBuildDate>
+    
+	<atom:link href="https://alili.tech/tags/http/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>聊聊HTTP的MIME</title>
+      <link>https://alili.tech/archive/3b54e2d1/</link>
+      <pubDate>Wed, 26 Jul 2017 16:14:25 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/3b54e2d1/</guid>
+      <description>MIME是什么? MIME(Multipurpose Internet Mail Extensions)多用途互联网邮件扩展类型;
+在最早的HTTP协议中,没有附加的数据类型信息.
+所有传送的数据都被客户程序解释为超文本标记语言HTML 文档，而为了支持多媒体数据类型，HTTP协议中就使用了附加在文档之前的MIME数据类型信息来标识数据类型。
+每个MIME类型由两部分组成，前面是数据的大类别，例如声音audio、图象image等，后面定义具体的种类。
+常见的MIME类型(通用型)：  超文本标记语言文本 .html text/html xml文档 .xml text/xml XHTML文档 .xhtml application/xhtml+xml 普通文本 .txt text/plain RTF文本 .rtf application/rtf PDF文档 .pdf application/pdf Microsoft Word文件 .word application/msword PNG图像 .png image/png GIF图形 .gif image/gif JPEG图形 .jpeg,.jpg image/jpeg au声音文件 .au audio/basic MIDI音乐文件 mid,.midi audio/midi,audio/x-midi RealAudio音乐文件 .ra, .ram audio/x-pn-realaudio MPEG文件 .mpg,.mpeg video/mpeg AVI文件 .avi video/x-msvideo GZIP文件 .gz application/x-gzip TAR文件 .tar application/x-tar 任意的二进制数据 application/octet-stream  用于WAP服务器的MIME类型有：  MRP文件（国内普遍的手机）.</description>
+    </item>
+    
+    <item>
+      <title>HTTP的URI格式说明</title>
+      <link>https://alili.tech/archive/84afbeeb/</link>
+      <pubDate>Tue, 25 Jul 2017 16:14:25 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/84afbeeb/</guid>
+      <description>下面是URI的各个组成部分
+ 权限 路径 ┌───────────────┴───────────────┐┌───┴────┐ abc://username:password@example.com:123/path/data?key=value&amp;amp;key2=value2#fragid1 └┬┘ └───────┬───────┘ └────┬────┘ └┬┘ └─────────┬─────────┘ └──┬──┘ 协议 用户信息 主机名 端口 查询参数 片段  </description>
+    </item>
+    
+  </channel>
+</rss>
