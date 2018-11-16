@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html mip="" lang="zh">
+<head><link rel="manifest" href="/manifest.json"><link rel="manifest" href="/manifest.json">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="wap-font-scale" content="no">
+    <meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34">
+    <meta name="sogou_site_verification" content="E8uWFBcf4a">
+    <meta name="description" content="&amp;#x9632;&amp;#x6296;&amp;#xFF08;debounce&amp;#xFF09;&amp;#x9632;&amp;#x6296;&amp;#x7684;&amp;#x4F5C;&amp;#x7528;&amp;#x662F;&amp;#x5C06;&amp;#x591A;&amp;#x4E2A;&amp;#x8FDE;&amp;#x7EED;&amp;#x7684;debounced&amp;#x8C03;&amp;#x7528;&amp;#x5408;&amp;#x5E76;&amp;#x4E3A;&amp;#x4E00;&amp;#x6B21">
+<meta name="keywords" content="Alili,前端大爆炸,WEB BANG BANG BANG,web前端博客,前端模块化,前端工程化,前端数据监控,性能优化,网页制作,前端,js,html5,css,踩坑小报告,微前端,树莓派,前端开发,区块链,网络,Mongodb,Vue.js,Angular.js,node.js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="防抖和节流的实现">
+<meta property="og:url" content="https://alili.tech/archive/d70a335f/index.html">
+<meta property="og:site_name" content="Alili">
+<meta property="og:description" content="&amp;#x9632;&amp;#x6296;&amp;#xFF08;debounce&amp;#xFF09;&amp;#x9632;&amp;#x6296;&amp;#x7684;&amp;#x4F5C;&amp;#x7528;&amp;#x662F;&amp;#x5C06;&amp;#x591A;&amp;#x4E2A;&amp;#x8FDE;&amp;#x7EED;&amp;#x7684;debounced&amp;#x8C03;&amp;#x7528;&amp;#x5408;&amp;#x5E76;&amp;#x4E3A;&amp;#x4E00;&amp;#x6B21">
+<meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2018-11-16T07:04:51.359Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="防抖和节流的实现">
+<meta name="twitter:description" content="&amp;#x9632;&amp;#x6296;&amp;#xFF08;debounce&amp;#xFF09;&amp;#x9632;&amp;#x6296;&amp;#x7684;&amp;#x4F5C;&amp;#x7528;&amp;#x662F;&amp;#x5C06;&amp;#x591A;&amp;#x4E2A;&amp;#x8FDE;&amp;#x7EED;&amp;#x7684;debounced&amp;#x8C03;&amp;#x7528;&amp;#x5408;&amp;#x5E76;&amp;#x4E3A;&amp;#x4E00;&amp;#x6B21">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-192x192.png">
+          
+        
+    
+    <!-- title -->
+    <title>防抖和节流的实现 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title>
+    <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v1/mip.css">
+    <link rel="manifest" href="/manifest.json">
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="canonical" href="https://alili.tech/archive/d70a335f/">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+    <!-- 熊掌号  -->
+    <script type="application/ld+json">
+  {
+      "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+      "@id": "https://alili.tech/archive/d70a335f/",
+      "appid": "1613049289050283", 
+      "title": "防抖和节流的实现 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
+      "images": [],
+      "pubDate": "2018-11-16T07:07:56"
+  } 
+</script>
+<script>
+  document.addEventListener("error", function (e) {
+    var elem = e.target;
+    if (elem.tagName.toLowerCase() == 'img') {
+      elem.style.display='none'
+    }
+  }, true);
+  </script>
+
+</head>
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')" style="display:none"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="http://github.com/Fantasy9527" rel="external nofollow noopener noreferrer" target="_blank">Github</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/archive/1af73009/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$(&quot;#i-prev&quot;).toggle()" onmouseout="$(&quot;#i-prev&quot;).toggle()"></i></a></li>
+        
+        
+        <li><a class="icon" href="/archive/acd7eec6/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$(&quot;#i-next&quot;).toggle()" onmouseout="$(&quot;#i-next&quot;).toggle()"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$(&quot;#i-top&quot;).toggle()" onmouseout="$(&quot;#i-top&quot;).toggle()"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$(&quot;#i-share&quot;).toggle()" onmouseout="$(&quot;#i-share&quot;).toggle()" onclick="$(&quot;#share&quot;).toggle();return false"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none">Previous post</span>
+      <span id="i-next" class="info" style="display:none">Next post</span>
+      <span id="i-top" class="info" style="display:none">Back to top</span>
+      <span id="i-share" class="info" style="display:none">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https://alili.tech/archive/d70a335f/&text=防抖和节流的实现" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://alili.tech/archive/d70a335f/" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://alili.tech/archive/d70a335f/&text=防抖和节流的实现" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://alili.tech/archive/d70a335f/&title=防抖和节流的实现" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://alili.tech/archive/d70a335f/&is_video=false&description=防抖和节流的实现" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=防抖和节流的实现&body=Check out this article: https://alili.tech/archive/d70a335f/"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://alili.tech/archive/d70a335f/&title=防抖和节流的实现" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://alili.tech/archive/d70a335f/&title=防抖和节流的实现" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-reddit" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://alili.tech/archive/d70a335f/&title=防抖和节流的实现" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://alili.tech/archive/d70a335f/&title=防抖和节流的实现" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-digg" aria-hidden="true"></i></a></li>
+</ul>
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#articleHeader0"><span class="toc-number">1.</span> <span class="toc-text">防抖（debounce）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#articleHeader1"><span class="toc-number">2.</span> <span class="toc-text">节流（throttle）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader2"><span class="toc-number">2.1.</span> <span class="toc-text">实现1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader3"><span class="toc-number">2.2.</span> <span class="toc-text">实现2</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#articleHeader4"><span class="toc-number">3.</span> <span class="toc-text">测试代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#articleHeader5"><span class="toc-number">4.</span> <span class="toc-text">参考资料</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number">5.</span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文标题"><span class="toc-number">5.1.</span> <span class="toc-text">原文标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">5.2.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">5.3.</span> <span class="toc-text"> 本文链接：</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+    
+    <div class="content index width mx-auto px3 my4">
+        
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <header>
+    <h1 class="posttitle" itemprop="name headline">
+        防抖和节流的实现
+    </h1>
+    <div class="meta">
+      <div class="postdate">
+        <time datetime="2018-11-12T02:30:05.000Z" itemprop="datePublished">2018-11-12</time>
+    </div>
+      <div class="article-tag">
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_container_page_pv">
+              <span id="busuanzi_value_page_pv">0</span>
+            </span>
+          
+      </div>
+      
+    </div>
+  </header>
+  
+  <div class="content" itemprop="articleBody">
+    <h1 id="articleHeader0">&#x9632;&#x6296;&#xFF08;debounce&#xFF09;</h1><p>&#x9632;&#x6296;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x5C06;&#x591A;&#x4E2A;&#x8FDE;&#x7EED;&#x7684;<code>debounced</code>&#x8C03;&#x7528;&#x5408;&#x5E76;&#x4E3A;&#x4E00;&#x6B21;<code>func</code>&#x8C03;&#x7528;&#x3002;&#x4F5C;&#x7528;&#x89C1;&#x53C2;&#x8003;&#x8D44;&#x6599;1&#x3002;</p><ol><li>&#x4E24;&#x6B21;<code>debounced</code>&#x8C03;&#x7528;&#x7684;&#x95F4;&#x9694;&#x5C0F;&#x4E8E;<code>waitTime</code>&#xFF0C;&#x5219;&#x89C6;&#x4E3A;&#x8FDE;&#x7EED;&#x7684;&#x8C03;&#x7528;&#x3002;</li><li>&#x5982;&#x679C;&#x8DDD;&#x79BB;&#x4E0A;&#x6B21;<code>debounced</code>&#x8C03;&#x7528;&#x5DF2;&#x7ECF;&#x8FC7;&#x53BB;&#x4E86;<code>waitTime</code>&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x5219;&#x8BF4;&#x660E;&#x8BE5;&#x8F6E;&#x8FDE;&#x7EED;&#x8C03;&#x7528;&#x5DF2;&#x7ECF;&#x7ED3;&#x675F;&#xFF08;&#x8FDB;&#x5165;&#x7A33;&#x5B9A;&#x72B6;&#x6001;&#xFF09;&#x3002;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#x70B9;&#x4E5F;&#x88AB;&#x79F0;&#x4E3A;trailing edge&#x3002;</li><li>&#x5728;trailing edge&#x4EE5;&#x540E;&#x7684;&#x7B2C;&#x4E00;&#x6B21;<code>debounced</code>&#x8C03;&#x7528;&#x662F;&#x4E0B;&#x4E00;&#x8F6E;&#x8FDE;&#x7EED;&#x8C03;&#x7528;&#x7684;&#x5F00;&#x59CB;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x7B2C;&#x4E00;&#x6B21;<code>debounced</code>&#x8C03;&#x7528;&#x4E5F;&#x662F;&#x4E00;&#x8F6E;&#x8FDE;&#x7EED;&#x8C03;&#x7528;&#x7684;&#x5F00;&#x59CB;&#x3002;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#x70B9;&#x4E5F;&#x88AB;&#x79F0;&#x4E3A;leading edge&#x3002;</li><li><code>immediate</code>&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x662F;&#x5426;&#x5728;leading edge&#x6267;&#x884C;&#x4E00;&#x6B21;<code>func</code>&#x8C03;&#x7528;&#x3002;<code>callAfterStable</code>&#x53C2;&#x6570;&#x63A7;&#x5236;&#x662F;&#x5426;&#x5728;trailing edge&#x6267;&#x884C;&#x4E00;&#x6B21;<code>func</code>&#x8C03;&#x7528;&#x3002;&#x56E0;&#x6B64;&#xFF0C;<code>func</code>&#x8C03;&#x7528;&#x53EF;&#x4EE5;&#x653E;&#x5728;&#x8FDE;&#x7EED;&#x8C03;&#x7528;&#x5F00;&#x59CB;&#x65F6;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x653E;&#x5728;&#x7ED3;&#x675F;&#x65F6;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x90FD;&#x653E;&#x3002;&#x4E00;&#x822C;&#x8BBE;&#x7F6E;<code>immediate = false,callAfterStable = true</code>&#xFF0C;&#x5C06;<code>func</code>&#x8C03;&#x7528;&#x653E;&#x5728;&#x8FDE;&#x7EED;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x65F6;&#x3002;</li><li>&#x5047;&#x8BBE;<code>debounced</code>&#x7684;&#x8C03;&#x7528;&#x4E00;&#x76F4;&#x6301;&#x7EED;&#x4E0D;&#x65AD;&#xFF0C;&#x4E14;&#x76F8;&#x90BB;&#x95F4;&#x9694;&#x90FD;&#x5C0F;&#x4E8E;<code>waitTime</code>&#xFF0C;&#x5219;&#x610F;&#x5473;&#x7740;&#x8FDE;&#x7EED;&#x8C03;&#x7528;&#x4E00;&#x76F4;&#x6CA1;&#x6709;&#x7ED3;&#x675F;&#xFF0C;&#x653E;&#x5728;trailing edge&#x7684;<code>func</code>&#x8C03;&#x7528;&#x4E00;&#x76F4;&#x4E0D;&#x4F1A;&#x6267;&#x884C;&#x3002;</li></ol><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="function debounce(
+  func,
+  waitTime = 1000,
+  immediate = false,
+  callAfterStable = true
+) {
+  if (!immediate &amp;&amp; !callAfterStable)
+    throw new Error(&quot;immediate &#x548C; callAfterStable &#x4E0D;&#x80FD;&#x540C;&#x65F6;&#x4E3A;false&quot;); // &#x5426;&#x5219;func.apply&#x6C38;&#x8FDC;&#x4E0D;&#x4F1A;&#x8C03;&#x7528;
+  let timeout = null;
+  const debounced = function(...args) {
+    // timeout&#x7684;&#x503C;&#x51B3;&#x5B9A;&#x5F53;&#x524D;&#x662F;&#x5426;&#x5904;&#x4E8E;&#x7A33;&#x5B9A;&#x72B6;&#x6001;(&#x5DF2;&#x7ECF;&#x7ECF;&#x8FC7;waitTime&#x6CA1;&#x6709;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x4E86;)
+    // &#x975E;&#x7A33;&#x5B9A;&#x72B6;&#x6001;&#x4E0B;&#xFF0C;&#x91CD;&#x65B0;&#x8BA1;&#x65F6;
+    if (timeout) clearTimeout(timeout);
+    // &#x7A33;&#x5B9A;&#x72B6;&#x6001;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x914D;&#x7F6E;&#x4E86;immediate&#xFF0C;&#x7B2C;&#x4E00;&#x6B21;&#x4E8B;&#x4EF6;&#x7ACB;&#x5373;&#x89E6;&#x53D1;func
+    else if (immediate) func.apply(this, args);
+
+    // waitTime&#x65F6;&#x95F4;&#x4EE5;&#x540E;&#x8FDB;&#x5165;&#x7A33;&#x5B9A;&#x72B6;&#x6001;(&#x524D;&#x63D0;&#x662F;&#x8FD9;&#x6BB5;&#x65F6;&#x95F4;&#x5185;&#x6CA1;&#x6709;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;)
+    timeout = setTimeout(() =&gt; {
+      // &#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4E00;&#x65E6;&#x88AB;&#x6210;&#x529F;&#x8C03;&#x7528;&#xFF0C;&#x8BF4;&#x660E;&#x5DF2;&#x7ECF;&#x7ECF;&#x8FC7;waitTime&#x6CA1;&#x6709;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x4E86;&#xFF0C;&#x8FDB;&#x5165;&#x7A33;&#x5B9A;&#x72B6;&#x6001;
+      timeout = null;
+      if (callAfterStable) func.apply(this, args);
+    }, waitTime);
+  };
+  debounced.forceStabilize = function() {
+    if (timeout) {
+      clearTimeout(timeout);
+      timeout = null;
+    }
+  };
+  return debounced;
+}" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="javascript hljs"><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">debounce</span>(<span class="hljs-params">
+  func,
+  waitTime = <span class="hljs-number">1000</span>,
+  immediate = false,
+  callAfterStable = true
+</span>) </span>{
+  <span class="hljs-keyword">if</span> (!immediate &amp;&amp; !callAfterStable)
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&quot;immediate &#x548C; callAfterStable &#x4E0D;&#x80FD;&#x540C;&#x65F6;&#x4E3A;false&quot;</span>); <span class="hljs-comment">// &#x5426;&#x5219;func.apply&#x6C38;&#x8FDC;&#x4E0D;&#x4F1A;&#x8C03;&#x7528;</span>
+  <span class="hljs-keyword">let</span> timeout = <span class="hljs-literal">null</span>;
+  <span class="hljs-keyword">const</span> debounced = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">...args</span>) </span>{
+    <span class="hljs-comment">// timeout&#x7684;&#x503C;&#x51B3;&#x5B9A;&#x5F53;&#x524D;&#x662F;&#x5426;&#x5904;&#x4E8E;&#x7A33;&#x5B9A;&#x72B6;&#x6001;(&#x5DF2;&#x7ECF;&#x7ECF;&#x8FC7;waitTime&#x6CA1;&#x6709;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x4E86;)</span>
+    <span class="hljs-comment">// &#x975E;&#x7A33;&#x5B9A;&#x72B6;&#x6001;&#x4E0B;&#xFF0C;&#x91CD;&#x65B0;&#x8BA1;&#x65F6;</span>
+    <span class="hljs-keyword">if</span> (timeout) clearTimeout(timeout);
+    <span class="hljs-comment">// &#x7A33;&#x5B9A;&#x72B6;&#x6001;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x914D;&#x7F6E;&#x4E86;immediate&#xFF0C;&#x7B2C;&#x4E00;&#x6B21;&#x4E8B;&#x4EF6;&#x7ACB;&#x5373;&#x89E6;&#x53D1;func</span>
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (immediate) func.apply(<span class="hljs-keyword">this</span>, args);
+
+    <span class="hljs-comment">// waitTime&#x65F6;&#x95F4;&#x4EE5;&#x540E;&#x8FDB;&#x5165;&#x7A33;&#x5B9A;&#x72B6;&#x6001;(&#x524D;&#x63D0;&#x662F;&#x8FD9;&#x6BB5;&#x65F6;&#x95F4;&#x5185;&#x6CA1;&#x6709;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;)</span>
+    timeout = setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+      <span class="hljs-comment">// &#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4E00;&#x65E6;&#x88AB;&#x6210;&#x529F;&#x8C03;&#x7528;&#xFF0C;&#x8BF4;&#x660E;&#x5DF2;&#x7ECF;&#x7ECF;&#x8FC7;waitTime&#x6CA1;&#x6709;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x4E86;&#xFF0C;&#x8FDB;&#x5165;&#x7A33;&#x5B9A;&#x72B6;&#x6001;</span>
+      timeout = <span class="hljs-literal">null</span>;
+      <span class="hljs-keyword">if</span> (callAfterStable) func.apply(<span class="hljs-keyword">this</span>, args);
+    }, waitTime);
+  };
+  debounced.forceStabilize = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">if</span> (timeout) {
+      clearTimeout(timeout);
+      timeout = <span class="hljs-literal">null</span>;
+    }
+  };
+  <span class="hljs-keyword">return</span> debounced;
+}</code></pre><h1 id="articleHeader1">&#x8282;&#x6D41;&#xFF08;throttle&#xFF09;</h1><p>&#x8282;&#x6D41;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x9650;&#x5236;<code>func</code>&#x8C03;&#x7528;&#x7684;&#x9891;&#x7387;&#xFF08;&#x6700;&#x591A;&#x6BCF;<code>waitTime</code>&#x8C03;&#x7528;&#x4E00;&#x6B21;&#xFF09;&#x3002;&#x4F5C;&#x7528;&#x89C1;&#x53C2;&#x8003;&#x8D44;&#x6599;2&#x3002;</p><p><strong>&#x9632;&#x6296;&#x4E0E;&#x8282;&#x6D41;&#x4E4B;&#x95F4;&#x7684;&#x91CD;&#x8981;&#x533A;&#x522B;&#x662F;&#xFF0C;&#x9632;&#x6296;&#x662F;&#x57FA;&#x4E8E;&#x4E0A;&#x6B21;<code>debounced</code>&#x8C03;&#x7528;&#x6765;&#x8BA1;&#x7B97;<code>waitTime</code>&#x7684;&#xFF1B;&#x800C;&#x8282;&#x6D41;&#x662F;&#x57FA;&#x4E8E;&#x4E0A;&#x6B21;<code>func</code>&#x8C03;&#x7528;&#x6765;&#x8BA1;&#x7B97;<code>waitTime</code>&#x7684;&#xFF0C;</strong>&#x53EA;&#x8981;&#x8DDD;&#x79BB;&#x4E0A;&#x6B21;<code>func</code>&#x8C03;&#x7528;&#x8D85;&#x8FC7;&#x4E86;<code>waitTime</code>&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x4E0B;&#x6B21;<code>func</code>&#x8C03;&#x7528;&#x3002;</p><p>&#x5B9E;&#x73B0;2&#x4FEE;&#x6539;&#x81EA;&#x53C2;&#x8003;&#x8D44;&#x6599;2&#x3002;&#x4E2A;&#x4EBA;&#x8BA4;&#x4E3A;&#x5B9E;&#x73B0;1&#x66F4;&#x597D;&#x7406;&#x89E3;&#x3002;</p><h2 id="articleHeader2">&#x5B9E;&#x73B0;1</h2><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="function throttle(func, waitTime = 1000, immediate = true) {
+  let timeout = null,
+    // called&#x8868;&#x793A;&#x8DDD;&#x79BB;&#x4E0A;&#x4E00;&#x6B21;func&#x8C03;&#x7528;&#xFF0C;&#x662F;&#x5426;&#x662F;&#x5426;&#x6709;&#x8C03;&#x7528;&#x8FC7;throttled
+    called,
+    // &#x5B58;&#x50A8;&#x4E0A;&#x4E00;&#x6B21;&#x8C03;&#x7528;throttled&#x65F6;&#x63D0;&#x4F9B;&#x7684;args&#x548C;this&#xFF0C;&#x7528;&#x6765;&#x5728;timeExpired&#x65F6;&#x8C03;&#x7528;func
+    lastArgs,
+    lastThis;
+
+  function timeExpired() {
+    if (called) {
+      func.apply(lastThis, lastArgs);
+      called = false;
+      timeout = setTimeout(timeExpired, waitTime);
+    } else {
+      // trailing edge
+      // &#x8FD9;&#x4E2A;trailing edge&#x4E0D;&#x518D;&#x8C03;&#x7528;func&#x4E86;&#xFF0C;
+      // &#x56E0;&#x4E3A;&#x5728;waitTime&#x4E4B;&#x524D;&#x8C03;&#x7528;&#x8FC7;&#x4E86;func&#xFF0C;&#x4E14;&#x81EA;&#x4ECE;&#x90A3;&#x4EE5;&#x540E;&#xFF0C;throttled&#x5C31;&#x6CA1;&#x6709;&#x88AB;&#x8C03;&#x7528;&#x8FC7;&#x3002;
+      timeout = null;
+      // &#x91CA;&#x653E;&#x5185;&#x5B58;
+      lastArgs = lastThis = null;
+    }
+  }
+
+  function throttled(...args) {
+    lastArgs = args;
+    lastThis = this;
+
+    if (!timeout) {
+      // leading edge
+      if (immediate) {
+        func.apply(lastThis, lastArgs);
+        called = false;
+      } else {
+        // !immediate&#x65F6;&#xFF0C;leading edge&#x4E0B;&#x4E00;&#x6B21;&#x7684;timeExpired&#x5FC5;&#x987B;&#x8C03;&#x7528;func
+        // &#x5426;&#x5219;&#xFF0C;&#x5982;&#x679C;(leading edge~leading edge + waitTime]&#x7684;&#x65F6;&#x95F4;&#x5185;&#x6CA1;&#x6709;&#x8C03;&#x7528;&#x8FC7;throttled&#xFF0C;func&#x4E00;&#x6B21;&#x4E5F;&#x4E0D;&#x4F1A;&#x6267;&#x884C;
+        called = true;
+      }
+      timeout = setTimeout(timeExpired, waitTime);
+    } else {
+      called = true;
+    }
+  }
+
+  throttled.cancle = function() {
+    if (timeout) {
+      clearTimeout(timeout);
+      timeout = null;
+      lastArgs = lastThis = null;
+    }
+  };
+
+  return throttled;
+}" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="javascript hljs"><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">throttle</span>(<span class="hljs-params">func, waitTime = <span class="hljs-number">1000</span>, immediate = true</span>) </span>{
+  <span class="hljs-keyword">let</span> timeout = <span class="hljs-literal">null</span>,
+    <span class="hljs-comment">// called&#x8868;&#x793A;&#x8DDD;&#x79BB;&#x4E0A;&#x4E00;&#x6B21;func&#x8C03;&#x7528;&#xFF0C;&#x662F;&#x5426;&#x662F;&#x5426;&#x6709;&#x8C03;&#x7528;&#x8FC7;throttled</span>
+    called,
+    <span class="hljs-comment">// &#x5B58;&#x50A8;&#x4E0A;&#x4E00;&#x6B21;&#x8C03;&#x7528;throttled&#x65F6;&#x63D0;&#x4F9B;&#x7684;args&#x548C;this&#xFF0C;&#x7528;&#x6765;&#x5728;timeExpired&#x65F6;&#x8C03;&#x7528;func</span>
+    lastArgs,
+    lastThis;
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">timeExpired</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">if</span> (called) {
+      func.apply(lastThis, lastArgs);
+      called = <span class="hljs-literal">false</span>;
+      timeout = setTimeout(timeExpired, waitTime);
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-comment">// trailing edge</span>
+      <span class="hljs-comment">// &#x8FD9;&#x4E2A;trailing edge&#x4E0D;&#x518D;&#x8C03;&#x7528;func&#x4E86;&#xFF0C;</span>
+      <span class="hljs-comment">// &#x56E0;&#x4E3A;&#x5728;waitTime&#x4E4B;&#x524D;&#x8C03;&#x7528;&#x8FC7;&#x4E86;func&#xFF0C;&#x4E14;&#x81EA;&#x4ECE;&#x90A3;&#x4EE5;&#x540E;&#xFF0C;throttled&#x5C31;&#x6CA1;&#x6709;&#x88AB;&#x8C03;&#x7528;&#x8FC7;&#x3002;</span>
+      timeout = <span class="hljs-literal">null</span>;
+      <span class="hljs-comment">// &#x91CA;&#x653E;&#x5185;&#x5B58;</span>
+      lastArgs = lastThis = <span class="hljs-literal">null</span>;
+    }
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">throttled</span>(<span class="hljs-params">...args</span>) </span>{
+    lastArgs = args;
+    lastThis = <span class="hljs-keyword">this</span>;
+
+    <span class="hljs-keyword">if</span> (!timeout) {
+      <span class="hljs-comment">// leading edge</span>
+      <span class="hljs-keyword">if</span> (immediate) {
+        func.apply(lastThis, lastArgs);
+        called = <span class="hljs-literal">false</span>;
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-comment">// !immediate&#x65F6;&#xFF0C;leading edge&#x4E0B;&#x4E00;&#x6B21;&#x7684;timeExpired&#x5FC5;&#x987B;&#x8C03;&#x7528;func</span>
+        <span class="hljs-comment">// &#x5426;&#x5219;&#xFF0C;&#x5982;&#x679C;(leading edge~leading edge + waitTime]&#x7684;&#x65F6;&#x95F4;&#x5185;&#x6CA1;&#x6709;&#x8C03;&#x7528;&#x8FC7;throttled&#xFF0C;func&#x4E00;&#x6B21;&#x4E5F;&#x4E0D;&#x4F1A;&#x6267;&#x884C;</span>
+        called = <span class="hljs-literal">true</span>;
+      }
+      timeout = setTimeout(timeExpired, waitTime);
+    } <span class="hljs-keyword">else</span> {
+      called = <span class="hljs-literal">true</span>;
+    }
+  }
+
+  throttled.cancle = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">if</span> (timeout) {
+      clearTimeout(timeout);
+      timeout = <span class="hljs-literal">null</span>;
+      lastArgs = lastThis = <span class="hljs-literal">null</span>;
+    }
+  };
+
+  <span class="hljs-keyword">return</span> throttled;
+}</code></pre><h2 id="articleHeader3">&#x5B9E;&#x73B0;2</h2><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="function throttle(
+  func,
+  waitTime = 1000,
+  immediate = true,
+  callAfterStable = true
+) {
+  if (!immediate &amp;&amp; !callAfterStable)
+    throw new Error(&quot;immediate &#x548C; callAfterStable &#x4E0D;&#x80FD;&#x540C;&#x65F6;&#x4E3A;false&quot;); // &#x4E0B;&#x9762;&#x4F1A;&#x6307;&#x51FA;&#x539F;&#x56E0;
+  let timeout = null,
+    // &#x4E0A;&#x4E00;&#x6B21;&#x8C03;&#x7528;func&#x7684;&#x65F6;&#x95F4;
+    previous = 0;
+  const throttled = function(...args) {
+    const now = Date.now();
+    // immediate==false&#x65F6;&#xFF0C;previous==0&#x6709;&#x7279;&#x6B8A;&#x7684;&#x542B;&#x4E49;&#xFF1A;&#x5F53;&#x524D;&#x5904;&#x4E8E;&#x7A33;&#x5B9A;&#x72B6;&#x6001;&#xFF0C;&#x672C;&#x6B21;&#x8C03;&#x7528;throttled&#x4E0D;&#x7ACB;&#x5373;&#x89E6;&#x53D1;func
+    // &#x963B;&#x6B62;&#x7ACB;&#x5373;&#x89E6;&#x53D1;func&#x7684;&#x65B9;&#x5F0F;&#xFF1A;previous = now&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;0&#x79D2;&#x524D;&#x521A;&#x521A;&#x8C03;&#x7528;&#x8FC7;&#x4E86;func
+    // &#x56E0;&#x6B64;&#x7A33;&#x5B9A;&#x72B6;&#x6001;&#x4E0B;&#x7684;&#x7B2C;&#x4E00;&#x6B21;throttled&#x8C03;&#x7528;&#x4F1A;&#x8FDB;&#x5165;elseif&#xFF0C;&#x5C06;func&#x63A8;&#x8FDF;&#x8C03;&#x7528;
+    if (!previous &amp;&amp; !immediate) previous = now;
+    const remain = waitTime - (now - previous);
+    // immediate &#x548C; callAfterStable &#x4E0D;&#x80FD;&#x540C;&#x65F6;&#x4E3A;false&#xFF0C;&#x5426;&#x5219;if&#x548C;elseif&#x8BED;&#x53E5;&#x5757;&#x90FD;&#x6C38;&#x8FDC;&#x4E0D;&#x4F1A;&#x8C03;&#x7528;
+    if (remain &lt; 0 || remain &gt; waitTime) {
+      // &#x8DDD;&#x79BB;&#x4E0A;&#x4E00;&#x6B21;&#x8C03;&#x7528;func&#x81F3;&#x5C11;&#x7ECF;&#x8FC7;&#x4E86;waitTime&#xFF0C;&#x672C;&#x6B21;throttled&#x7ACB;&#x5373;&#x89E6;&#x53D1;func
+      if (timeout) {
+        // &#x6709;&#x53EF;&#x80FD;&#x6709;timer&#x56DE;&#x8C03;&#x4ECD;&#x963B;&#x585E;&#x5728;&#x65F6;&#x95F4;&#x961F;&#x5217;&#x4E2D;&#xFF08;&#x867D;&#x7136;&#x80AF;&#x5B9A;&#x5DF2;&#x7ECF;&#x8D85;&#x65F6;&#xFF09;&#xFF0C;&#x9500;&#x6BC1;&#x5B83;
+        clearTimeout(timeout);
+        timeout = null;
+      }
+      func.apply(this, args);
+      previous = now;
+    } else if (!timeout &amp;&amp; callAfterStable) {
+      // throttled&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x8DDD;&#x79BB;&#x4E0A;&#x4E00;&#x6B21;&#x8C03;&#x7528;func&#x8FD8;&#x6CA1;&#x6709;&#x8FC7;&#x53BB;waitTime&#xFF0C;
+      // &#x4E0D;&#x7ACB;&#x5373;&#x89E6;&#x53D1;func&#xFF0C;&#x800C;&#x662F;&#x5B89;&#x6392;&#x5230;previous+waitTime&#x65F6;&#x523B;
+      // &#x5224;&#x65AD;!timeout&#x662F;&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#x5B89;&#x6392;&#x591A;&#x4E2A;func&#x5728;previous+waitTime&#x65F6;&#x523B;&#x8C03;&#x7528;
+      timeout = setTimeout(() =&gt; {
+        func.apply(this, args);
+        // immediate==false&#x65F6;&#xFF0C;previous=0&#x8868;&#x793A;&#x8FDB;&#x5165;&#x7A33;&#x5B9A;&#x72B6;&#x6001;&#xFF0C;&#x8BBE;&#x7F6E;&#x5B83;&#x662F;&#x4E3A;&#x4E86;&#x963B;&#x6B62;&#x4E0B;&#x4E00;&#x6B21;&#x7684;immediate&#x8C03;&#x7528;
+        previous = immediate ? Date.now() : 0;
+        timeout = null;
+      }, remain);
+    }
+  };
+  throttled.forceStabilize = function() {
+    previous = 0;
+    if (timeout) {
+      clearTimeout(timeout);
+      timeout = null;
+    }
+  };
+  return throttled;
+}" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="javascript hljs"><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">throttle</span>(<span class="hljs-params">
+  func,
+  waitTime = <span class="hljs-number">1000</span>,
+  immediate = true,
+  callAfterStable = true
+</span>) </span>{
+  <span class="hljs-keyword">if</span> (!immediate &amp;&amp; !callAfterStable)
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&quot;immediate &#x548C; callAfterStable &#x4E0D;&#x80FD;&#x540C;&#x65F6;&#x4E3A;false&quot;</span>); <span class="hljs-comment">// &#x4E0B;&#x9762;&#x4F1A;&#x6307;&#x51FA;&#x539F;&#x56E0;</span>
+  <span class="hljs-keyword">let</span> timeout = <span class="hljs-literal">null</span>,
+    <span class="hljs-comment">// &#x4E0A;&#x4E00;&#x6B21;&#x8C03;&#x7528;func&#x7684;&#x65F6;&#x95F4;</span>
+    previous = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">const</span> throttled = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">...args</span>) </span>{
+    <span class="hljs-keyword">const</span> now = <span class="hljs-built_in">Date</span>.now();
+    <span class="hljs-comment">// immediate==false&#x65F6;&#xFF0C;previous==0&#x6709;&#x7279;&#x6B8A;&#x7684;&#x542B;&#x4E49;&#xFF1A;&#x5F53;&#x524D;&#x5904;&#x4E8E;&#x7A33;&#x5B9A;&#x72B6;&#x6001;&#xFF0C;&#x672C;&#x6B21;&#x8C03;&#x7528;throttled&#x4E0D;&#x7ACB;&#x5373;&#x89E6;&#x53D1;func</span>
+    <span class="hljs-comment">// &#x963B;&#x6B62;&#x7ACB;&#x5373;&#x89E6;&#x53D1;func&#x7684;&#x65B9;&#x5F0F;&#xFF1A;previous = now&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;0&#x79D2;&#x524D;&#x521A;&#x521A;&#x8C03;&#x7528;&#x8FC7;&#x4E86;func</span>
+    <span class="hljs-comment">// &#x56E0;&#x6B64;&#x7A33;&#x5B9A;&#x72B6;&#x6001;&#x4E0B;&#x7684;&#x7B2C;&#x4E00;&#x6B21;throttled&#x8C03;&#x7528;&#x4F1A;&#x8FDB;&#x5165;elseif&#xFF0C;&#x5C06;func&#x63A8;&#x8FDF;&#x8C03;&#x7528;</span>
+    <span class="hljs-keyword">if</span> (!previous &amp;&amp; !immediate) previous = now;
+    <span class="hljs-keyword">const</span> remain = waitTime - (now - previous);
+    <span class="hljs-comment">// immediate &#x548C; callAfterStable &#x4E0D;&#x80FD;&#x540C;&#x65F6;&#x4E3A;false&#xFF0C;&#x5426;&#x5219;if&#x548C;elseif&#x8BED;&#x53E5;&#x5757;&#x90FD;&#x6C38;&#x8FDC;&#x4E0D;&#x4F1A;&#x8C03;&#x7528;</span>
+    <span class="hljs-keyword">if</span> (remain &lt; <span class="hljs-number">0</span> || remain &gt; waitTime) {
+      <span class="hljs-comment">// &#x8DDD;&#x79BB;&#x4E0A;&#x4E00;&#x6B21;&#x8C03;&#x7528;func&#x81F3;&#x5C11;&#x7ECF;&#x8FC7;&#x4E86;waitTime&#xFF0C;&#x672C;&#x6B21;throttled&#x7ACB;&#x5373;&#x89E6;&#x53D1;func</span>
+      <span class="hljs-keyword">if</span> (timeout) {
+        <span class="hljs-comment">// &#x6709;&#x53EF;&#x80FD;&#x6709;timer&#x56DE;&#x8C03;&#x4ECD;&#x963B;&#x585E;&#x5728;&#x65F6;&#x95F4;&#x961F;&#x5217;&#x4E2D;&#xFF08;&#x867D;&#x7136;&#x80AF;&#x5B9A;&#x5DF2;&#x7ECF;&#x8D85;&#x65F6;&#xFF09;&#xFF0C;&#x9500;&#x6BC1;&#x5B83;</span>
+        clearTimeout(timeout);
+        timeout = <span class="hljs-literal">null</span>;
+      }
+      func.apply(<span class="hljs-keyword">this</span>, args);
+      previous = now;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (!timeout &amp;&amp; callAfterStable) {
+      <span class="hljs-comment">// throttled&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x8DDD;&#x79BB;&#x4E0A;&#x4E00;&#x6B21;&#x8C03;&#x7528;func&#x8FD8;&#x6CA1;&#x6709;&#x8FC7;&#x53BB;waitTime&#xFF0C;</span>
+      <span class="hljs-comment">// &#x4E0D;&#x7ACB;&#x5373;&#x89E6;&#x53D1;func&#xFF0C;&#x800C;&#x662F;&#x5B89;&#x6392;&#x5230;previous+waitTime&#x65F6;&#x523B;</span>
+      <span class="hljs-comment">// &#x5224;&#x65AD;!timeout&#x662F;&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#x5B89;&#x6392;&#x591A;&#x4E2A;func&#x5728;previous+waitTime&#x65F6;&#x523B;&#x8C03;&#x7528;</span>
+      timeout = setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        func.apply(<span class="hljs-keyword">this</span>, args);
+        <span class="hljs-comment">// immediate==false&#x65F6;&#xFF0C;previous=0&#x8868;&#x793A;&#x8FDB;&#x5165;&#x7A33;&#x5B9A;&#x72B6;&#x6001;&#xFF0C;&#x8BBE;&#x7F6E;&#x5B83;&#x662F;&#x4E3A;&#x4E86;&#x963B;&#x6B62;&#x4E0B;&#x4E00;&#x6B21;&#x7684;immediate&#x8C03;&#x7528;</span>
+        previous = immediate ? <span class="hljs-built_in">Date</span>.now() : <span class="hljs-number">0</span>;
+        timeout = <span class="hljs-literal">null</span>;
+      }, remain);
+    }
+  };
+  throttled.forceStabilize = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    previous = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">if</span> (timeout) {
+      clearTimeout(timeout);
+      timeout = <span class="hljs-literal">null</span>;
+    }
+  };
+  <span class="hljs-keyword">return</span> throttled;
+}</code></pre><h1 id="articleHeader4">&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;</h1><div class="widget-codetool" style="display:none"><div class="widget-codetool--inner"><span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x5168;&#x9009;"></span> <span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-cmn-Hans&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;IE=edge, chrome=1&quot;&gt;
+  &lt;title&gt;test&lt;/title&gt;
+  &lt;style&gt;
+    #container {
+      width: 100%;
+      height: 200px;
+      line-height: 200px;
+      text-align: center;
+      color: #fff;
+      background-color: #444;
+      font-size: 30px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div id=&quot;container&quot;&gt;&lt;/div&gt;
+  &lt;script src=&quot;lib.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    var count = 1;
+    var container = document.getElementById(&quot;container&quot;);
+
+    function getUserAction() {
+      container.innerHTML = count++;
+    }
+
+    // container.onmousemove = debounce(getUserAction);
+    container.onmousemove = throttle(getUserAction);
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;" title="" data-original-title="&#x590D;&#x5236;"></span> <span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="&#x653E;&#x8FDB;&#x7B14;&#x8BB0;"></span></div></div><pre class="xml hljs"><code class="html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;zh-cmn-Hans&quot;</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;x-ua-compatible&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;IE=edge, chrome=1&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>test<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-id">#container</span> {
+      <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+      <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>;
+      <span class="hljs-attribute">line-height</span>: <span class="hljs-number">200px</span>;
+      <span class="hljs-attribute">text-align</span>: center;
+      <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+      <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#444</span>;
+      <span class="hljs-attribute">font-size</span>: <span class="hljs-number">30px</span>;
+    }
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;lib.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> count = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">var</span> container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;container&quot;</span>);
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getUserAction</span>(<span class="hljs-params"></span>) </span>{
+      container.innerHTML = count++;
+    }
+
+    <span class="hljs-comment">// container.onmousemove = debounce(getUserAction);</span>
+    container.onmousemove = throttle(getUserAction);
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre><h1 id="articleHeader5">&#x53C2;&#x8003;&#x8D44;&#x6599;</h1><ol><li><a href="https://github.com/mqyqingfeng/Blog/issues/22" rel="external nofollow noopener noreferrer" target="_blank">JavaScript&#x4E13;&#x9898;&#x4E4B;&#x8DDF;&#x7740;underscore&#x5B66;&#x9632;&#x6296;</a></li><li><a href="https://github.com/mqyqingfeng/Blog/issues/26" rel="external nofollow noopener noreferrer" target="_blank">JavaScript&#x4E13;&#x9898;&#x4E4B;&#x8DDF;&#x7740;underscore&#x5B66;&#x8282;&#x6D41;</a></li><li><a href="https://css-tricks.com/debouncing-throttling-explained-examples/" rel="external nofollow noopener noreferrer" target="_blank">Debouncing and Throttling Explained Through Examples</a></li></ol>
+
+<h1 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h1><p>本文资源来源互联网，仅供学习研究使用，版权归该资源的合法拥有者所有，<br>本文仅用于学习、研究和交流目的。转载请注明出处、完整链接以及原作者。<br>原作者若认为本站侵犯了您的版权，请联系我们，我们会立即删除！</p>
+<h2 id="原文标题"><a href="#原文标题" class="headerlink" title="原文标题"></a>原文标题</h2><p>防抖和节流的实现</p>
+<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h2><p><a href="https://segmentfault.com/a/1190000016296253" rel="external nofollow noopener noreferrer" target="_blank">https://segmentfault.com/a/1190000016296253</a></p>
+<p></p><h2> 本文链接：</h2> <a href="https://alili.tech/archive/d70a335f/">https://alili.tech/archive/d70a335f/</a> <p></p>
+  </div>
+</article>
+
+
+<!-- 
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </div>
+ -->
+
+<!-- <div id="ad-box">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1769617155450062"
+         data-ad-slot="6920805491"
+         data-ad-format="link"
+         data-full-width-responsive="true"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div> -->
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<div class="blog-post-comments"></div>
+<script>
+    new Valine({
+        el: '.blog-post-comments', // 
+        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', // 这里填写上面得到的APP ID
+        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', // 这里填写上面得到的APP KEY
+        placeholder: '说点什么?', // [v1.0.7 new]留言框占位提示文字
+        avatar:'retro',
+        notify:true,
+        verify:true
+    });
+</script>
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="http://github.com/Fantasy9527" rel="external nofollow noopener noreferrer" target="_blank">Github</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#articleHeader0"><span class="toc-number">1.</span> <span class="toc-text">防抖（debounce）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#articleHeader1"><span class="toc-number">2.</span> <span class="toc-text">节流（throttle）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader2"><span class="toc-number">2.1.</span> <span class="toc-text">实现1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader3"><span class="toc-number">2.2.</span> <span class="toc-text">实现2</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#articleHeader4"><span class="toc-number">3.</span> <span class="toc-text">测试代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#articleHeader5"><span class="toc-number">4.</span> <span class="toc-text">参考资料</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#版权声明"><span class="toc-number">5.</span> <span class="toc-text">版权声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文标题"><span class="toc-number">5.1.</span> <span class="toc-text">原文标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">5.2.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">5.3.</span> <span class="toc-text"> 本文链接：</span></a></li></ol></li></ol>
+    </div>
+
+
+    <div id="actions-footer" style="display:none">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$(&quot;#toc-footer&quot;).toggle();return false"><i class="fa fa-list fa-lg" aria-hidden="true"></i> 目录</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$(&quot;#nav-footer&quot;).toggle();return false"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> 导航</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Hosted by <a href="https://pages.coding.me" style="font-weight: bold" rel="external nofollow noopener noreferrer" target="_blank">Coding Pages</a>
+ </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a target="_blank" href="http://github.com/Fantasy9527" rel="external nofollow noopener noreferrer">Github</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+ 
+
+ <p>Copyright &copy; 2018 Fan <a href="http://www.miitbeian.gov.cn" rel="external nofollow noopener noreferrer" target="_blank">浙ICP备18045521号 </a></p>
+ 
+</footer>
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Disqus Comments -->
+
+    <!-- <script type="text/javascript">
+        var disqus_shortname = 'alili-tech';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            if(window.location.host=="localhost:4000")return;
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script> -->
+
+    <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    </script>
+    <script>(function(){
+        var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4":"https://jspassport.ssl.qhimg.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4";
+        document.write('<script src="' + src + '" id="sozz"><\/script>');
+        })();
+        </script>
+
+<!-- <script async src="/js/jquery.min.js"></script> -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://c.mipcdn.com/static/v1/mip.js"></script>
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1542352029116')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
+</html>

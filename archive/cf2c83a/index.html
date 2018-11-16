@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html mip="" lang="zh">
+<head><link rel="manifest" href="/manifest.json"><link rel="manifest" href="/manifest.json">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="wap-font-scale" content="no">
+    <meta name="360-site-verification" content="0903ba33c82867d1f7bd8831e32a7e34">
+    <meta name="sogou_site_verification" content="E8uWFBcf4a">
+    <meta name="description" content="随之团队的扩大，统一编码规范，提高编码质量，变得尤为重要。代码审查作为可以有效提高代码质量的方式之一,有必要在公司推行代码审查制度.让团队养成代码审查的习惯,提高代码质量,提前规避不必要的问题.为了更加高效的代码审核,需要一款代码审查工具.所以才有了这份使用报告.下面是我在使用中,尝试使用的一些工具.以及一些使用上的评价与总结. 1) CodeStrikerCodeStriker免费和开源的web">
+<meta name="keywords" content="Code Review">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Code Review工具推荐以及使用报告">
+<meta property="og:url" content="https://alili.tech/archive/cf2c83a/index.html">
+<meta property="og:site_name" content="Alili">
+<meta property="og:description" content="随之团队的扩大，统一编码规范，提高编码质量，变得尤为重要。代码审查作为可以有效提高代码质量的方式之一,有必要在公司推行代码审查制度.让团队养成代码审查的习惯,提高代码质量,提前规避不必要的问题.为了更加高效的代码审核,需要一款代码审查工具.所以才有了这份使用报告.下面是我在使用中,尝试使用的一些工具.以及一些使用上的评价与总结. 1) CodeStrikerCodeStriker免费和开源的web">
+<meta property="og:locale" content="zh">
+<meta property="og:image" content="http://i0.wp.com/devzum.com/wp-content/uploads/2015/04/codestriker-e1427936836285.png?resize=600%2C480">
+<meta property="og:image" content="http://i0.wp.com/devzum.com/wp-content/uploads/2015/04/rhodecode-e1427936979546.png?resize=600%2C375">
+<meta property="og:image" content="http://i0.wp.com/devzum.com/wp-content/uploads/2015/04/codeberg-e1427937091542.png?resize=600%2C375">
+<meta property="og:image" content="http://i0.wp.com/devzum.com/wp-content/uploads/2015/04/pfabricator1-e1427937361221.png?resize=600%2C375">
+<meta property="og:image" content="http://i2.wp.com/devzum.com/wp-content/uploads/2015/04/codifferous-e1427937449256.png?resize=600%2C375">
+<meta property="og:image" content="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/getbarkeep-e1427937557909.png?resize=600%2C375">
+<meta property="og:image" content="http://i2.wp.com/devzum.com/wp-content/uploads/2015/04/crucible-e1427937724181.png?resize=600%2C375">
+<meta property="og:image" content="http://i2.wp.com/devzum.com/wp-content/uploads/2015/04/codereviewtool-e1427937802564.png?resize=600%2C375">
+<meta property="og:image" content="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/malevich-e1427937918164.png?resize=600%2C375">
+<meta property="og:image" content="http://i0.wp.com/devzum.com/wp-content/uploads/2015/04/smartbear-e1427938021424.png?resize=600%2C375">
+<meta property="og:image" content="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/veracode-e1427938137259.png?resize=600%2C375">
+<meta property="og:image" content="http://i0.wp.com/devzum.com/wp-content/uploads/2015/04/gerrit-e1427938383133.png?resize=600%2C375">
+<meta property="og:image" content="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/review-assistant-e1427938511235.png?resize=600%2C375">
+<meta property="og:image" content="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/reviewboard-e1427938611206.png?resize=600%2C375">
+<meta property="og:image" content="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/peerreviewplugin-e1427938775883.png?resize=600%2C375">
+<meta property="og:image" content="http://i0.wp.com/devzum.com/wp-content/uploads/2015/04/coderreview-e1427938967801.png?resize=600%2C375">
+<meta property="og:image" content="http://i2.wp.com/devzum.com/wp-content/uploads/2015/04/codereviwer-e1427939124157.png?resize=600%2C375">
+<meta property="og:image" content="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/code-tool-e1427939448703.png?resize=600%2C375">
+<meta property="og:image" content="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/jarcitect-e1427939616591.png?resize=600%2C375">
+<meta property="og:image" content="http://i2.wp.com/devzum.com/wp-content/uploads/2015/04/reviewable-e1427939794960.png?resize=600%2C375">
+<meta property="og:updated_time" content="2018-11-16T07:04:51.371Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Code Review工具推荐以及使用报告">
+<meta name="twitter:description" content="随之团队的扩大，统一编码规范，提高编码质量，变得尤为重要。代码审查作为可以有效提高代码质量的方式之一,有必要在公司推行代码审查制度.让团队养成代码审查的习惯,提高代码质量,提前规避不必要的问题.为了更加高效的代码审核,需要一款代码审查工具.所以才有了这份使用报告.下面是我在使用中,尝试使用的一些工具.以及一些使用上的评价与总结. 1) CodeStrikerCodeStriker免费和开源的web">
+<meta name="twitter:image" content="http://i0.wp.com/devzum.com/wp-content/uploads/2015/04/codestriker-e1427936836285.png?resize=600%2C480">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-192x192.png">
+          
+        
+    
+    <!-- title -->
+    <title>Code Review工具推荐以及使用报告 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!</title>
+    <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v1/mip.css">
+    <link rel="manifest" href="/manifest.json">
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="canonical" href="https://alili.tech/archive/cf2c83a/">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+    <!-- 熊掌号  -->
+    <script type="application/ld+json">
+  {
+      "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+      "@id": "https://alili.tech/archive/cf2c83a/",
+      "appid": "1613049289050283", 
+      "title": "Code Review工具推荐以及使用报告 | 前端大爆炸! - WEB BANG! BANG!! BANG!!!", 
+      "images": [],
+      "pubDate": "2018-11-16T07:07:57"
+  } 
+</script>
+<script>
+  document.addEventListener("error", function (e) {
+    var elem = e.target;
+    if (elem.tagName.toLowerCase() == 'img') {
+      elem.style.display='none'
+    }
+  }, true);
+  </script>
+
+</head>
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')" style="display:none"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="http://github.com/Fantasy9527" rel="external nofollow noopener noreferrer" target="_blank">Github</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/archive/318077db/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$(&quot;#i-prev&quot;).toggle()" onmouseout="$(&quot;#i-prev&quot;).toggle()"></i></a></li>
+        
+        
+        <li><a class="icon" href="/archive/de6d750a/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$(&quot;#i-next&quot;).toggle()" onmouseout="$(&quot;#i-next&quot;).toggle()"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$(&quot;#i-top&quot;).toggle()" onmouseout="$(&quot;#i-top&quot;).toggle()"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$(&quot;#i-share&quot;).toggle()" onmouseout="$(&quot;#i-share&quot;).toggle()" onclick="$(&quot;#share&quot;).toggle();return false"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none">Previous post</span>
+      <span id="i-next" class="info" style="display:none">Next post</span>
+      <span id="i-top" class="info" style="display:none">Back to top</span>
+      <span id="i-share" class="info" style="display:none">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://v.t.sina.com.cn/share/share.php?u=https://alili.tech/archive/cf2c83a/&text=Code Review工具推荐以及使用报告" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://alili.tech/archive/cf2c83a/" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://alili.tech/archive/cf2c83a/&text=Code Review工具推荐以及使用报告" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://alili.tech/archive/cf2c83a/&title=Code Review工具推荐以及使用报告" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://alili.tech/archive/cf2c83a/&is_video=false&description=Code Review工具推荐以及使用报告" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Code Review工具推荐以及使用报告&body=Check out this article: https://alili.tech/archive/cf2c83a/"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://alili.tech/archive/cf2c83a/&title=Code Review工具推荐以及使用报告" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://alili.tech/archive/cf2c83a/&title=Code Review工具推荐以及使用报告" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-reddit" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://alili.tech/archive/cf2c83a/&title=Code Review工具推荐以及使用报告" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://alili.tech/archive/cf2c83a/&title=Code Review工具推荐以及使用报告" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-digg" aria-hidden="true"></i></a></li>
+</ul>
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-CodeStriker"><span class="toc-number">1.</span> <span class="toc-text">1) CodeStriker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-RhodeCode"><span class="toc-number">2.</span> <span class="toc-text">2) RhodeCode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Code-Brag"><span class="toc-number">3.</span> <span class="toc-text">3) Code Brag</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Phabricator"><span class="toc-number">4.</span> <span class="toc-text">4) Phabricator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Codifferous"><span class="toc-number">5.</span> <span class="toc-text">5) Codifferous</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-Getbarkeep"><span class="toc-number">6.</span> <span class="toc-text">6) Getbarkeep</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-Crucible"><span class="toc-number">7.</span> <span class="toc-text">7) Crucible</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-Code-Review-Tool"><span class="toc-number">8.</span> <span class="toc-text">8) Code Review Tool</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-Malevich"><span class="toc-number">9.</span> <span class="toc-text">9) Malevich</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-SmartBear"><span class="toc-number">10.</span> <span class="toc-text">10) SmartBear</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-Veracode"><span class="toc-number">11.</span> <span class="toc-text">11) Veracode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-Gerrit"><span class="toc-number">12.</span> <span class="toc-text">12) Gerrit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-Review-Assistant"><span class="toc-number">13.</span> <span class="toc-text">13) Review Assistant</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-Review-Board"><span class="toc-number">14.</span> <span class="toc-text">14) Review Board</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-Peer-Review-Plugin"><span class="toc-number">15.</span> <span class="toc-text">15) Peer Review Plugin</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-Codereview"><span class="toc-number">16.</span> <span class="toc-text">16) Codereview</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-Code-Reviewer"><span class="toc-number">17.</span> <span class="toc-text">17) Code Reviewer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#18-Code-Analysis-Tool"><span class="toc-number">18.</span> <span class="toc-text">18) Code Analysis Tool</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#19-jArchitect"><span class="toc-number">19.</span> <span class="toc-text">19) jArchitect</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#20-Reviewable"><span class="toc-number">20.</span> <span class="toc-text">20) Reviewable</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21-Gitlab"><span class="toc-number">21.</span> <span class="toc-text">21) Gitlab</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21-Upsource"><span class="toc-number">22.</span> <span class="toc-text">21) Upsource</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number"></span> <span class="toc-text"> 本文链接：</span></a>
+    </li></div>
+  </span>
+</div>
+    
+    <div class="content index width mx-auto px3 my4">
+        
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <header>
+    <h1 class="posttitle" itemprop="name headline">
+        Code Review工具推荐以及使用报告
+    </h1>
+    <div class="meta">
+      <div class="postdate">
+        <time datetime="2018-11-12T00:00:00.000Z" itemprop="datePublished">2018-11-12</time>
+    </div>
+      <div class="article-tag">
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_container_page_pv">
+              <span id="busuanzi_value_page_pv">0</span>
+            </span>
+          
+      </div>
+      <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Code-Review/">Code Review</a>
+    </div>
+    </div>
+  </header>
+  
+  <div class="content" itemprop="articleBody">
+    <p>随之团队的扩大，统一编码规范，提高编码质量，变得尤为重要。代码审查作为可以有效提高代码质量的方式之一,有必要在公司推行代码审查制度.<br>让团队养成代码审查的习惯,提高代码质量,提前规避不必要的问题.<br>为了更加高效的代码审核,需要一款代码审查工具.所以才有了这份使用报告.<br>下面是我在使用中,尝试使用的一些工具.以及一些使用上的评价与总结.</p>
+<h3 id="1-CodeStriker"><a href="#1-CodeStriker" class="headerlink" title="1) CodeStriker"></a>1) <a href="http://codestriker.sourceforge.net/index.html" title="best code review tools for programmers " rel="external nofollow noopener noreferrer" target="_blank">CodeStriker</a></h3><p>CodeStriker免费和开源的web应用程序,可以帮助开发人员基于web的代码审查。开发者canensures问题,评论和决策是记录在一个数据库,并提供一个舒适的工作空间实际执行代码检查。</p>
+<p><a href="http://i0.wp.com/devzum.com/wp-content/uploads/2015/04/codestriker-e1427936836285.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://i0.wp.com/devzum.com/wp-content/uploads/2015/04/codestriker-e1427936836285.png?resize=600%2C480" alt="技术分享"></a></p>
+<ul>
+<li>价格: 免费</li>
+<li>UI交互: ★</li>
+<li>安装维护 :★★★</li>
+<li>易学程度: ★★★★★</li>
+</ul>
+<blockquote>
+<p>总结: CodeStriker 对于一个代码审查工具来说,功能上已经可以基本满足.但是因为开发时间太过久远,已经很长时间没有人在维护了,而且UI比较有历史的味道.</p>
+</blockquote>
+<h3 id="2-RhodeCode"><a href="#2-RhodeCode" class="headerlink" title="2) RhodeCode"></a>2) <a href="https://rhodecode.com/" title="best code review tools for programmers " rel="external nofollow noopener noreferrer" target="_blank">RhodeCode</a></h3><p>RhodeCode也是一个很好的工具,回顾你的代码并找出代码中的bug和问题并删除后检查代码。</p>
+<p><a href="http://i0.wp.com/devzum.com/wp-content/uploads/2015/04/rhodecode-e1427936979546.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://i0.wp.com/devzum.com/wp-content/uploads/2015/04/rhodecode-e1427936979546.png?resize=600%2C375" alt="技术分享"></a></p>
+<ul>
+<li>价格: 社区版本免费,企业版本收费</li>
+<li>UI交互: ★★★★</li>
+<li>安装维护 :★★★</li>
+<li>易学程度: ★★★★★</li>
+</ul>
+<blockquote>
+<p>总结: RhodeCode在使用使用过程中,还是比较优秀的.工具的安装部署使用docker也比较方便.使用上比较顺畅,可以作为使用的备选软件.</p>
+</blockquote>
+<h3 id="3-Code-Brag"><a href="#3-Code-Brag" class="headerlink" title="3) Code Brag"></a>3) <a href="http://codebrag.com/" title="best code review tools for programmers " rel="external nofollow noopener noreferrer" target="_blank">Code Brag</a></h3><p>Codebrag是一个简单的和轻量级的工具,代码审查,让这一过程为您的团队工作。它有助于解决一些问题像非阻塞的代码评审,智能电子邮件通知,内联注释,喜欢得多。</p>
+<p><a href="http://i0.wp.com/devzum.com/wp-content/uploads/2015/04/codeberg-e1427937091542.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://i0.wp.com/devzum.com/wp-content/uploads/2015/04/codeberg-e1427937091542.png?resize=600%2C375" alt="技术分享"></a></p>
+<ul>
+<li>价格: 免费</li>
+<li>UI交互: ★★★★</li>
+<li>安装维护 :★★★★</li>
+<li>易学程度: ★★★★★</li>
+</ul>
+<blockquote>
+<p>总结: Codebrag 是一款开源工具,安装起来不算难.也有一定程度上的社交属性.在使用期间官网在国内打不开,软件的安装资源不是很好获取.</p>
+</blockquote>
+<h3 id="4-Phabricator"><a href="#4-Phabricator" class="headerlink" title="4) Phabricator"></a>4) <a href="http://phabricator.org/" title="best code review tools for programmers " rel="external nofollow noopener noreferrer" target="_blank">Phabricator</a></h3><p>Phabricator是一个开源软件和web应用程序包括代码评审,主持GIT / Hg / SVN,发现错误时,浏览源代码和审计等</p>
+<p><a href="http://i0.wp.com/devzum.com/wp-content/uploads/2015/04/pfabricator1-e1427937361221.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://i0.wp.com/devzum.com/wp-content/uploads/2015/04/pfabricator1-e1427937361221.png?resize=600%2C375" alt="技术分享"></a></p>
+<ul>
+<li>价格: 免费</li>
+<li>UI交互: ★★★★</li>
+<li>安装维护 :★</li>
+<li>易学程度: ★</li>
+</ul>
+<blockquote>
+<p>总结: Phabricator 是一款非常强大的工具,是facebook做的.安装是在太难,网上的安装使用文档就有140多页.使用的学习成本也需要一定的时间. </p>
+</blockquote>
+<h3 id="5-Codifferous"><a href="#5-Codifferous" class="headerlink" title="5) Codifferous"></a>5) <a href="https://codifferous.com/" title="best code review tools for programmers " rel="external nofollow noopener noreferrer" target="_blank">Codifferous</a></h3><p>这是更快的代码评审服务,Codifferous是免费的代码审查工具。Codifferous便于评审代码与您的团队,无论你住在哪里当你工作。</p>
+<p><a href="http://i2.wp.com/devzum.com/wp-content/uploads/2015/04/codifferous-e1427937449256.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://i2.wp.com/devzum.com/wp-content/uploads/2015/04/codifferous-e1427937449256.png?resize=600%2C375" alt="技术分享"></a></p>
+<ul>
+<li>价格: 免费</li>
+<li>UI交互: ★★★★</li>
+<li>安装维护 :★★★</li>
+<li>易学程度: ★★★★</li>
+</ul>
+<blockquote>
+<p>总结: Codifferous 官网国内打不开,翻墙体验过demo之后,工具比较简单,用起来没有什么问题.也没有太多优点.</p>
+</blockquote>
+<h3 id="6-Getbarkeep"><a href="#6-Getbarkeep" class="headerlink" title="6) Getbarkeep"></a>6) <a href="http://getbarkeep.org/" title="best code review tools for programmers " rel="external nofollow noopener noreferrer" target="_blank">Getbarkeep</a></h3><p>Barkeep 是“友好的代码评审系统”——一种快速、有趣的方式检查代码。工程组织可以用它来保持高质量栏。通过它你可以看到提交任何Git存储库,看到差别,写评论,这些评论电邮给你的提交者。</p>
+<p><a href="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/getbarkeep-e1427937557909.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/getbarkeep-e1427937557909.png?resize=600%2C375" alt="技术分享"></a></p>
+<ul>
+<li>价格: 免费</li>
+<li>UI交互: ★★★★</li>
+<li>安装维护 :★★★</li>
+<li>易学程度: ★★★★</li>
+</ul>
+<blockquote>
+<p>总结: Barkeep 是一款开源工具,UI简洁,没有太多亮点也没有太多缺点.官网不好打开.资源获取的不是很容易.</p>
+</blockquote>
+<h3 id="7-Crucible"><a href="#7-Crucible" class="headerlink" title="7) Crucible"></a>7) <a href="https://www.atlassian.com/software/crucible/overview" title="best code review tools for programmers " rel="external nofollow noopener noreferrer" target="_blank">Crucible</a></h3><p>Crucible 是另一个最受欢迎的代码复查工具对于开发人员来说,它提供评审代码,讨论修改,并确定缺陷与坩埚的灵活评估工作流。它的代码评审容易颠覆,CVS,必然等等。</p>
+<p><a href="http://i2.wp.com/devzum.com/wp-content/uploads/2015/04/crucible-e1427937724181.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://i2.wp.com/devzum.com/wp-content/uploads/2015/04/crucible-e1427937724181.png?resize=600%2C375" alt="技术分享"></a></p>
+<ul>
+<li>价格: 收费</li>
+<li>UI交互: ★★★★</li>
+<li>安装维护 :不需要安装</li>
+<li>易学程度: ★★★★</li>
+</ul>
+<blockquote>
+<p>总结: 大厂出品的工具,在使用了免费半之后,完全可以满足代码审查的需求.界面也比较漂亮,交互友好.官方在youtube上有出详细的英文使用教程.</p>
+</blockquote>
+<h3 id="8-Code-Review-Tool"><a href="#8-Code-Review-Tool" class="headerlink" title="8) Code Review Tool"></a>8) <a href="http://codereviewtool.com/" title="best code review tools for programmers " rel="external nofollow noopener noreferrer" target="_blank">Code Review Tool</a></h3><p>Code Review Tool 允许团队成员评审代码协作和高效的方式通过移除大部分的开销定期正式的代码检查。它提供了所有正式的代码检查的好处,需要大大减少时间和精力而正式的代码检查。它同时支持正式和轻量级代码评审流程。</p>
+<p><a href="http://i2.wp.com/devzum.com/wp-content/uploads/2015/04/codereviewtool-e1427937802564.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://i2.wp.com/devzum.com/wp-content/uploads/2015/04/codereviewtool-e1427937802564.png?resize=600%2C375" alt="技术分享"></a></p>
+<ul>
+<li>价格: 收费</li>
+<li>UI交互: ★</li>
+<li>安装维护 :★★★</li>
+<li>易学程度: ★★★★</li>
+</ul>
+<blockquote>
+<p>总结: 这么丑的软件居然是个收费软件.而且还不便宜.</p>
+</blockquote>
+<h3 id="9-Malevich"><a href="#9-Malevich" class="headerlink" title="9) Malevich"></a>9) <a href="http://malevich.codeplex.com/" title="best code review tools for programmers " rel="external nofollow noopener noreferrer" target="_blank">Malevich</a></h3><p>审查代码马列 Malevich 的确实是很容易的。评论者可以看到原始的和在浏览器中文件的新版本。评论一行代码,他或她简单地点击这条线,并开始打字。提交评论让他们看到请求的代码复查的人,以及所有其他评论者。</p>
+<p><a href="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/malevich-e1427937918164.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/malevich-e1427937918164.png?resize=600%2C375" alt="技术分享"></a></p>
+<ul>
+<li>价格: 免费</li>
+<li>UI交互: ★</li>
+<li>安装维护 :★★★</li>
+<li>易学程度: ★★★★</li>
+</ul>
+<blockquote>
+<p>总结: 不能审查git仓库的代码</p>
+</blockquote>
+<h3 id="10-SmartBear"><a href="#10-SmartBear" class="headerlink" title="10) SmartBear"></a>10) <a href="http://smartbear.com/product/collaborator/overview/" title="best code review tools for programmers " rel="external nofollow noopener noreferrer" target="_blank">SmartBear</a></h3><p>Collaborator 是一个代码审查工具,可以帮助开发、测试和管理团队共同努力,生成高质量的代码。它允许团队同行评审代码、用户故事和测试计划在一个透明的,协作框架——立即使整个团队保持速度对代码所做的更改。</p>
+<p><a href="http://i0.wp.com/devzum.com/wp-content/uploads/2015/04/smartbear-e1427938021424.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://i0.wp.com/devzum.com/wp-content/uploads/2015/04/smartbear-e1427938021424.png?resize=600%2C375" alt="技术分享"></a></p>
+<ul>
+<li>价格: 收费</li>
+<li>UI交互: ★★★★</li>
+<li>安装维护 :★★★</li>
+<li>易学程度: ★★★★</li>
+</ul>
+<blockquote>
+<p>总结: 代码审查绰绰有余,很多大厂都在使用.体验了demo之后感觉是一款非常优秀的工具.</p>
+</blockquote>
+<h3 id="11-Veracode"><a href="#11-Veracode" class="headerlink" title="11) Veracode"></a>11) <a href="http://www.veracode.com/security/code-review" title="best code review tools for programmers " rel="external nofollow noopener noreferrer" target="_blank">Veracode</a></h3><p>Code review 是一个考试的计算机源代码。它的目的是找到并修复错误引入应用程序在开发阶段,提升软件的整体质量和开发人员的技能。代码评审等各种形式的程序做结对编程,非正式的次数,和正式的检查。</p>
+<p><a href="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/veracode-e1427938137259.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/veracode-e1427938137259.png?resize=600%2C375" alt="技术分享"></a></p>
+<ul>
+<li>价格: 收费</li>
+<li>UI交互: ★★★★</li>
+<li>安装维护 :★★★</li>
+<li>易学程度: ★★★★</li>
+</ul>
+<h3 id="12-Gerrit"><a href="#12-Gerrit" class="headerlink" title="12) Gerrit"></a>12) <a href="https://code.google.com/p/gerrit/" title="best code review tools for programmers " rel="external nofollow noopener noreferrer" target="_blank">Gerrit</a></h3><p>Gerrit 是一个基于web的代码评审系统,促进在线代码评审项目使用Git版本控制系统。</p>
+<p><a href="http://i0.wp.com/devzum.com/wp-content/uploads/2015/04/gerrit-e1427938383133.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://i0.wp.com/devzum.com/wp-content/uploads/2015/04/gerrit-e1427938383133.png?resize=600%2C375" alt="技术分享"></a></p>
+<ul>
+<li>价格: 免费</li>
+<li>UI交互: ★★★★</li>
+<li>安装维护 :★★★</li>
+<li>易学程度: ★★★★</li>
+</ul>
+<blockquote>
+<p>总结: 这是google的一款代码审查工具,UI已经是上古风格了.</p>
+</blockquote>
+<h3 id="13-Review-Assistant"><a href="#13-Review-Assistant" class="headerlink" title="13) Review Assistant"></a>13) <a href="https://visualstudiogallery.msdn.microsoft.com/9ef817b4-2c6d-4213-8b08-5be48f9d91b9" title="best code review tools for programmers " rel="external nofollow noopener noreferrer" target="_blank">Review Assistant</a></h3><p>Review assistant 很简单和更好的代码复查工具visual studio。</p>
+<p>1)添加你的评论在审查级别,或特定源代码块或行。<br>2)初始化代码与您的团队成员的讨论没有预定的会议。<br>3)标记的评论和缺陷需要固定。<br>4)评论显示在代码编辑器中。<br>5)即时切换检查代码和注释。</p>
+<p><a href="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/review-assistant-e1427938511235.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/review-assistant-e1427938511235.png?resize=600%2C375" alt="技术分享"></a></p>
+<ul>
+<li>价格: 免费</li>
+<li>UI交互: ★★★★</li>
+<li>安装维护 :★★★</li>
+<li>易学程度: ★★★★</li>
+</ul>
+<blockquote>
+<p>总结: 需要结合开发工具,不适用我们现在的状况.</p>
+</blockquote>
+<h3 id="14-Review-Board"><a href="#14-Review-Board" class="headerlink" title="14) Review Board"></a>14) <a href="https://www.reviewboard.org/" title="best code review tools for programmers " rel="external nofollow noopener noreferrer" target="_blank">Review Board</a></h3><p>Review board 是更好的代码复查工具程序员节省时间,金钱和理智。你的代码是syntax-highlighted,更快的阅读。我们将向您展示功能一行,替换文本内改变了什么,等等。</p>
+<p><a href="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/reviewboard-e1427938611206.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/reviewboard-e1427938611206.png?resize=600%2C375" alt="技术分享"></a></p>
+<ul>
+<li>价格: 免费</li>
+<li>UI交互: ★★★★</li>
+<li>安装维护 :★★★</li>
+<li>易学程度: ★★★★</li>
+</ul>
+<blockquote>
+<p>总结: UI有点复古也有点小清新,使用了一下,功能是够用了的,可以作为备选.</p>
+</blockquote>
+<h3 id="15-Peer-Review-Plugin"><a href="#15-Peer-Review-Plugin" class="headerlink" title="15) Peer Review Plugin"></a>15) <a href="http://trac-hacks.org/wiki/PeerReviewPlugin" title="best code review tools for programmers " rel="external nofollow noopener noreferrer" target="_blank">Peer Review Plugin</a></h3><p>这个插件的目标是消除需要耗费时间代码评审会议通过给开发人员评审代码的能力在自己的时间在一个用户友好的网络环境。</p>
+<p><a href="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/peerreviewplugin-e1427938775883.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/peerreviewplugin-e1427938775883.png?resize=600%2C375" alt="技术分享"></a></p>
+<ul>
+<li>价格: 免费</li>
+<li>UI交互: ★★★★</li>
+<li>安装维护 :★★★</li>
+<li>易学程度: ★★★★</li>
+</ul>
+<blockquote>
+<p>总结: 不能审查git仓库的代码,不考虑使用.</p>
+</blockquote>
+<h3 id="16-Codereview"><a href="#16-Codereview" class="headerlink" title="16) Codereview"></a>16) <a href="https://codereview.appspot.com/" title="best code review tools for programmers " rel="external nofollow noopener noreferrer" target="_blank">Codereview</a></h3><p><a href="http://i0.wp.com/devzum.com/wp-content/uploads/2015/04/coderreview-e1427938967801.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://i0.wp.com/devzum.com/wp-content/uploads/2015/04/coderreview-e1427938967801.png?resize=600%2C375" alt="技术分享"></a></p>
+<ul>
+<li>价格: 免费</li>
+<li>UI交互: ★</li>
+<li>安装维护 :★★★</li>
+<li>易学程度: ★★★★</li>
+</ul>
+<blockquote>
+<p>总结: 不能审查git仓库的代码,不考虑使用.</p>
+</blockquote>
+<h3 id="17-Code-Reviewer"><a href="#17-Code-Reviewer" class="headerlink" title="17) Code Reviewer"></a>17) <a href="https://codereviewer.org/" title="best code review tools for programmers " rel="external nofollow noopener noreferrer" target="_blank">Code Reviewer</a></h3><p>CodeReviewer 是免费的,简单,易于部署和使用代码审查工具从SmartBear的公司发明了合作者,该行业的第一个商业代码审查工具。</p>
+<p><a href="http://i2.wp.com/devzum.com/wp-content/uploads/2015/04/codereviwer-e1427939124157.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://i2.wp.com/devzum.com/wp-content/uploads/2015/04/codereviwer-e1427939124157.png?resize=600%2C375" alt="技术分享"></a></p>
+<ul>
+<li>价格: 免费</li>
+<li>UI交互: ★</li>
+<li>安装维护 :★★★</li>
+<li>易学程度: ★★★★</li>
+</ul>
+<blockquote>
+<p>总结: 但是界面已经比较上古,对git支持不是很好</p>
+</blockquote>
+<h3 id="18-Code-Analysis-Tool"><a href="#18-Code-Analysis-Tool" class="headerlink" title="18) Code Analysis Tool"></a>18) <a href="http://www.castsoftware.com/products/code-analysis-tools" title="best code review tools for programmers " rel="external nofollow noopener noreferrer" target="_blank">Code Analysis Tool</a></h3><p>CAST code 把代码分析技术是针对解决两个基本问题。首先,大多数现代IT系统是由成千上万的组件,由多个团队和许多开发人员。测量软件质量在跨多个技术,这些系统需要仔细校准版本和明确的应用程序边界的识别</p>
+<p><a href="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/code-tool-e1427939448703.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/code-tool-e1427939448703.png?resize=600%2C375" alt="技术分享"></a></p>
+<ul>
+<li>价格: 收费</li>
+<li>UI交互: ★★★</li>
+<li>安装维护 :★★★</li>
+<li>易学程度: ★</li>
+</ul>
+<blockquote>
+<p>总结: 工具太过复杂,不适合在公司内部推广</p>
+</blockquote>
+<h3 id="19-jArchitect"><a href="#19-jArchitect" class="headerlink" title="19) jArchitect"></a>19) <a href="http://www.jarchitect.com/" title="best code review tools for programmers " rel="external nofollow noopener noreferrer" target="_blank">jArchitect</a></h3><p>JArchitect 简化了管理一个复杂的Java代码库。分析代码结构,可以指定设计规则,做有效的代码审查和主进化通过比较不同版本的代码。</p>
+<p><a href="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/jarcitect-e1427939616591.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://i1.wp.com/devzum.com/wp-content/uploads/2015/04/jarcitect-e1427939616591.png?resize=600%2C375" alt="技术分享"></a></p>
+<ul>
+<li>价格: 收费</li>
+<li>UI交互: ★★★</li>
+<li>安装维护 :★★★</li>
+<li>易学程度: ★</li>
+</ul>
+<blockquote>
+<p>总结: 界面比较上古,文档完善,很多大公司在使用.</p>
+</blockquote>
+<h3 id="20-Reviewable"><a href="#20-Reviewable" class="headerlink" title="20) Reviewable"></a>20) <a href="https://reviewable.io/" title="best code review tools for programmers " rel="external nofollow noopener noreferrer" target="_blank">Reviewable</a></h3><p>Reviewales 是新的代码审查工具,它有助于改善与语法突出显示的代码质量,发现bug /问题,使代码更好,干净的界面,定制代码字体和许多更多。</p>
+<p><a href="http://i2.wp.com/devzum.com/wp-content/uploads/2015/04/reviewable-e1427939794960.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://i2.wp.com/devzum.com/wp-content/uploads/2015/04/reviewable-e1427939794960.png?resize=600%2C375" alt="技术分享"></a></p>
+<ul>
+<li>价格: 社区版本免费</li>
+<li>UI交互: ★★★★★</li>
+<li>安装维护 :★★★</li>
+<li>易学程度: ★★★★★</li>
+</ul>
+<blockquote>
+<p>总结: 交互比较友好,安装使用docker也不麻烦.社区版本是免费的.可以考虑使用该工具</p>
+</blockquote>
+<h3 id="21-Gitlab"><a href="#21-Gitlab" class="headerlink" title="21) Gitlab"></a>21) Gitlab</h3><p>GitLab 是一个用于仓库管理系统的开源项目，使用Git作为代码管理工具，并在此基础上搭建起来的web服务,支持codereview.</p>
+<ul>
+<li>价格: 社区版本免费</li>
+<li>UI交互: ★★★★★</li>
+<li>安装维护 :★★★</li>
+<li>易学程度: ★★★★★</li>
+</ul>
+<blockquote>
+<p>总结: 目前公司已经在使用该工具,如果在该工具的基础上进行拓展.是一款不错的代码审查工具.对于团队的学习成本也比较低.比较容易推广.</p>
+</blockquote>
+<h3 id="21-Upsource"><a href="#21-Upsource" class="headerlink" title="21) Upsource"></a>21) Upsource</h3><p>Upsource是jetbrains出品的code review工具。</p>
+<ul>
+<li>价格: 收费</li>
+<li>UI交互: ★★★★★</li>
+<li>安装维护 :★★★★</li>
+<li>易学程度: ★★★★★</li>
+</ul>
+<blockquote>
+<p>总结: 是目前发现最好的代码审查工具,基本上满足代码审查平台的所有需求.免费版本只能注册8个用户.</p>
+</blockquote>
+<p><a href="http://www.bubuko.com/infodetail-730801.html" rel="external nofollow noopener noreferrer" target="_blank">参考链接: 20最佳代码审查工具-专门为开发人员准备</a></p>
+<p></p><h2> 本文链接：</h2> <a href="https://alili.tech/archive/cf2c83a/">https://alili.tech/archive/cf2c83a/</a> <p></p>
+  </div>
+</article>
+
+
+<!-- 
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </div>
+ -->
+
+<!-- <div id="ad-box">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1769617155450062"
+         data-ad-slot="6920805491"
+         data-ad-format="link"
+         data-full-width-responsive="true"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div> -->
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<div class="blog-post-comments"></div>
+<script>
+    new Valine({
+        el: '.blog-post-comments', // 
+        app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', // 这里填写上面得到的APP ID
+        app_key: 'hLhtmd4tT0qJbyO2SgQ8odya', // 这里填写上面得到的APP KEY
+        placeholder: '说点什么?', // [v1.0.7 new]留言框占位提示文字
+        avatar:'retro',
+        notify:true,
+        verify:true
+    });
+</script>
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="http://github.com/Fantasy9527" rel="external nofollow noopener noreferrer" target="_blank">Github</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-CodeStriker"><span class="toc-number">1.</span> <span class="toc-text">1) CodeStriker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-RhodeCode"><span class="toc-number">2.</span> <span class="toc-text">2) RhodeCode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Code-Brag"><span class="toc-number">3.</span> <span class="toc-text">3) Code Brag</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Phabricator"><span class="toc-number">4.</span> <span class="toc-text">4) Phabricator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Codifferous"><span class="toc-number">5.</span> <span class="toc-text">5) Codifferous</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-Getbarkeep"><span class="toc-number">6.</span> <span class="toc-text">6) Getbarkeep</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-Crucible"><span class="toc-number">7.</span> <span class="toc-text">7) Crucible</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-Code-Review-Tool"><span class="toc-number">8.</span> <span class="toc-text">8) Code Review Tool</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-Malevich"><span class="toc-number">9.</span> <span class="toc-text">9) Malevich</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-SmartBear"><span class="toc-number">10.</span> <span class="toc-text">10) SmartBear</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-Veracode"><span class="toc-number">11.</span> <span class="toc-text">11) Veracode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-Gerrit"><span class="toc-number">12.</span> <span class="toc-text">12) Gerrit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-Review-Assistant"><span class="toc-number">13.</span> <span class="toc-text">13) Review Assistant</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-Review-Board"><span class="toc-number">14.</span> <span class="toc-text">14) Review Board</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-Peer-Review-Plugin"><span class="toc-number">15.</span> <span class="toc-text">15) Peer Review Plugin</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-Codereview"><span class="toc-number">16.</span> <span class="toc-text">16) Codereview</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-Code-Reviewer"><span class="toc-number">17.</span> <span class="toc-text">17) Code Reviewer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#18-Code-Analysis-Tool"><span class="toc-number">18.</span> <span class="toc-text">18) Code Analysis Tool</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#19-jArchitect"><span class="toc-number">19.</span> <span class="toc-text">19) jArchitect</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#20-Reviewable"><span class="toc-number">20.</span> <span class="toc-text">20) Reviewable</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21-Gitlab"><span class="toc-number">21.</span> <span class="toc-text">21) Gitlab</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21-Upsource"><span class="toc-number">22.</span> <span class="toc-text">21) Upsource</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number"></span> <span class="toc-text"> 本文链接：</span></a>
+    </li></div>
+
+
+    <div id="actions-footer" style="display:none">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$(&quot;#toc-footer&quot;).toggle();return false"><i class="fa fa-list fa-lg" aria-hidden="true"></i> 目录</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast')"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$(&quot;#nav-footer&quot;).toggle();return false"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> 导航</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Hosted by <a href="https://pages.coding.me" style="font-weight: bold" rel="external nofollow noopener noreferrer" target="_blank">Coding Pages</a>
+ </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Archives</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a target="_blank" href="http://github.com/Fantasy9527" rel="external nofollow noopener noreferrer">Github</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+ 
+
+ <p>Copyright &copy; 2018 Fan <a href="http://www.miitbeian.gov.cn" rel="external nofollow noopener noreferrer" target="_blank">浙ICP备18045521号 </a></p>
+ 
+</footer>
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Disqus Comments -->
+
+    <!-- <script type="text/javascript">
+        var disqus_shortname = 'alili-tech';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            if(window.location.host=="localhost:4000")return;
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script> -->
+
+    <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    </script>
+    <script>(function(){
+        var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4":"https://jspassport.ssl.qhimg.com/11.0.1.js?05520debdbedd780ba345d83b7d5e6f4";
+        document.write('<script src="' + src + '" id="sozz"><\/script>');
+        })();
+        </script>
+
+<!-- <script async src="/js/jquery.min.js"></script> -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://c.mipcdn.com/static/v1/mip.js"></script>
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1542352029116')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
+</html>
