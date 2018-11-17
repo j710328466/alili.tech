@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://alili.tech/archive/0xh05yxhj3yq/</loc>
+    <lastmod>2018-11-17T16:14:25+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://alili.tech/archive/lr0s1xtpgxs/</loc>
     <lastmod>2018-11-17T14:34:54+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -999,6 +1006,13 @@
   <url>
     <loc>https://alili.tech/archive/r9fpkko1wpi/</loc>
     <lastmod>2018-11-15T21:18:14+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://alili.tech/archive/obvozmdf/</loc>
+    <lastmod>2018-11-15T16:14:25+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -8697,7 +8711,7 @@
   
   <url>
     <loc>https://alili.tech/</loc>
-    <lastmod>2018-11-17T14:34:54+00:00</lastmod>
+    <lastmod>2018-11-17T16:14:25+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -8711,7 +8725,7 @@
   
   <url>
     <loc>https://alili.tech/archive/</loc>
-    <lastmod>2018-11-17T14:34:54+00:00</lastmod>
+    <lastmod>2018-11-17T16:14:25+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -8774,6 +8788,13 @@
   <url>
     <loc>https://alili.tech/tags/http/</loc>
     <lastmod>2017-07-26T16:14:25+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://alili.tech/tags/hugo/</loc>
+    <lastmod>2018-11-17T16:14:25+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -8857,7 +8878,7 @@
   
   <url>
     <loc>https://alili.tech/tags/seo/</loc>
-    <lastmod>2018-10-24T21:32:05+00:00</lastmod>
+    <lastmod>2018-11-17T16:14:25+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
