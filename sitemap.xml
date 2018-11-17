@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://alili.tech/archive/r5ibcpo557h/</loc>
+    <lastmod>2018-11-19T16:14:25+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://alili.tech/archive/yqufemb0c1m/</loc>
     <lastmod>2018-11-18T16:14:25+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -8718,7 +8725,7 @@
   
   <url>
     <loc>https://alili.tech/</loc>
-    <lastmod>2018-11-18T16:14:25+00:00</lastmod>
+    <lastmod>2018-11-19T16:14:25+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -8732,7 +8739,7 @@
   
   <url>
     <loc>https://alili.tech/archive/</loc>
-    <lastmod>2018-11-18T16:14:25+00:00</lastmod>
+    <lastmod>2018-11-19T16:14:25+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -8801,7 +8808,7 @@
   
   <url>
     <loc>https://alili.tech/tags/hugo/</loc>
-    <lastmod>2018-11-18T16:14:25+00:00</lastmod>
+    <lastmod>2018-11-19T16:14:25+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>

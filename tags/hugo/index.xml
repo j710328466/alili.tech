@@ -6,10 +6,24 @@
     <description>Recent content in Hugo on Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 18 Nov 2018 16:14:25 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Nov 2018 16:14:25 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>让你的Hugo博客支持echarts图表</title>
+      <link>https://alili.tech/archive/r5ibcpo557h/</link>
+      <pubDate>Mon, 19 Nov 2018 16:14:25 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/r5ibcpo557h/</guid>
+      <description>在之前hexo构建的博客里,有使用到图表,但是现在迁移到hugo之后,就没有相关的插件支持了.
+所以自己动手丰衣足食.
+在hugo中有支持一种特性叫做 Shortcodes.简单的来说就是一个可以传参的小模板.
+创建Shortcodes 创建 ./layouts/Shortcodes/echarts.html文件
+&amp;lt;div id=&amp;quot;echarts{{ .Get `height` }}&amp;quot; style=&amp;quot;width: 100%;height: {{.Get `height`}}px;margin: 0 auto&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script src=&amp;quot;https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt; // 基于准备好的dom，初始化echarts实例 var myChart = echarts.init(document.getElementById(&#39;echarts{{ .Get `height` }}&#39;)); // 指定图表的配置项和数据 var option = JSON.parse({{ .Inner }}) // 使用刚指定的配置项和数据显示图表。 myChart.setOption(option); &amp;lt;/script&amp;gt;  使用 在 Shortcodes 插入echarts的配置数据,这样你就可以再页面中看到一个完整的图表了
+ $(function(){ var html = &#34;\n\x3cpre\x3e\n\x3ccode class=\x22language-json hljs\x22\x3e\n\x3cspan class=\x22hljs-string\x22\x3e\x22{{\x22\x3c\/span\x3e \x26lt; echarts height=\x3cspan class=\x22hljs-string\x22\x3e\x22400\x22\x3c\/span\x3e \x26gt; \x3cspan class=\x22hljs-string\x22\x3e\x22}}\x22\x3c\/span\x3e\n\x3cbr\x3e\n{\x3cspan class=\x22hljs-attr\x22\x3e\x22textStyle\x22\x3c\/span\x3e:{\x3cspan class=\x22hljs-attr\x22\x3e\x22color\x22\x3c\/span\x3e:\x3cspan class=\x22hljs-string\x22\x3e\x22#fff\x22\x3c\/span\x3e},\x3cspan class=\x22hljs-attr\x22\x3e\x22title\x22\x3c\/span\x3e:{\x3cspan class=\x22hljs-attr\x22\x3e\x22text\x22\x3c\/span\x3e:\x3cspan class=\x22hljs-string\x22\x3e\x222018年11月国内浏览器数据统计\x22\x3c\/span\x3e,\x3cspan class=\x22hljs-attr\x22\x3e\x22subtext\x22\x3c\/span\x3e:\x3cspan class=\x22hljs-string\x22\x3e\x22浏览器数据分析\x22\x3c\/span\x3e,\x3cspan class=\x22hljs-attr\x22\x3e\x22x\x22\x3c\/span\x3e:\x3cspan class=\x22hljs-string\x22\x3e\x22center\x22\x3c\/span\x3e,\x3cspan class=\x22hljs-attr\x22\x3e\x22textStyle\x22\x3c\/span\x3e:{\x3cspan class=\x22hljs-attr\x22\x3e\x22color\x22\x3c\/span\x3e:\x3cspan class=\x22hljs-string\x22\x3e\x22#fff\x22\x3c\/span\x3e}},\x3cspan class=\x22hljs-attr\x22\x3e\x22tooltip\x22\x3c\/span\x3e:{\x3cspan class=\x22hljs-attr\x22\x3e\x22trigger\x22\x3c\/span\x3e:\x3cspan class=\x22hljs-string\x22\x3e\x22item\x22\x3c\/span\x3e,\x3cspan class=\x22hljs-attr\x22\x3e\x22formatter\x22\x3c\/span\x3e:\x3cspan class=\x22hljs-string\x22\x3e\x22{a} \x26lt;br\/\x26gt;{b} : {c} ({d}%)\x22\x3c\/span\x3e},\x3cspan class=\x22hljs-attr\x22\x3e\x22legend\x22\x3c\/span\x3e:{\x3cspan class=\x22hljs-attr\x22\x3e\x22type\x22\x3c\/span\x3e:\x3cspan class=\x22hljs-string\x22\x3e\x22scroll\x22\x3c\/span\x3e,\x3cspan class=\x22hljs-attr\x22\x3e\x22orient\x22\x3c\/span\x3e:\x3cspan class=\x22hljs-string\x22\x3e\x22vertical\x22\x3c\/span\x3e,\x3cspan class=\x22hljs-attr\x22\x3e\x22right\x22\x3c\/span\x3e:\x3cspan class=\x22hljs-number\x22\x3e10\x3c\/span\x3e,\x3cspan class=\x22hljs-attr\x22\x3e\x22top\x22\x3c\/span\x3e:\x3cspan class=\x22hljs-number\x22\x3e120\x3c\/span\x3e,\x3cspan class=\x22hljs-attr\x22\x3e\x22bottom\x22\x3c\/span\x3e:\x3cspan class=\x22hljs-number\x22\x3e20\x3c\/span\x3e,\x3cspan class=\x22hljs-attr\x22\x3e\x22data\x22\x3c\/span\x3e:[\x3cspan class=\x22hljs-string\x22\x3e\x22Chrome\x22\x3c\/span\x3e,\x3cspan class=\x22hljs-string\x22\x3e\x22IE 9.</description>
+    </item>
     
     <item>
       <title>Hugo平台博文指定时间之后不显示?</title>
