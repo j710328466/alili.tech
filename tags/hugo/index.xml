@@ -6,10 +6,27 @@
     <description>Recent content in Hugo on Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 17 Nov 2018 16:14:25 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Nov 2018 16:14:25 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo平台博文指定时间之后不显示?</title>
+      <link>https://alili.tech/archive/yqufemb0c1m/</link>
+      <pubDate>Sun, 18 Nov 2018 16:14:25 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/yqufemb0c1m/</guid>
+      <description> 自从博客切换到Hugo之后,是遇到了一些坑.
+明明正确添加到文章,页面时间调整到今天,或者是今天之后缺不能显示在文章列表里.
+原因是Hugo模板在循环遍历文件的时候,只要超过当前时间的文章都不会出现.
+时区问题 如果你的文章时间没有指定时区的话.
+像这样2018-11-19 16:14:25,很有可能文章不会显示.
+Hugo时间统一为格林威治时间,因为中国的时间比格林威治时间早8个小时. 格林威治时间没有到你配置的时间的时候,文章是不会出现在文章列表里的.
+解决方案 本地服务
+hugo server --buildFuture  页面生成
+hugo --buildFuture  </description>
+    </item>
     
     <item>
       <title>Hugo博客百度SEO终极优化,熊掌号自动推送</title>
@@ -25,7 +42,7 @@ gulp 在这里我要使用gulp来做我的自动化任务管理工具
     </item>
     
     <item>
-      <title>Hexo迁移Hugo指南</title>
+      <title>博客构建工具Hugo的基本使用</title>
       <link>https://alili.tech/archive/obvozmdf/</link>
       <pubDate>Thu, 15 Nov 2018 16:14:25 +0000</pubDate>
       
