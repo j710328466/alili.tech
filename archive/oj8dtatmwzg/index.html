@@ -37,7 +37,6 @@ before_script:
   - git config user.name &quot;Fan&quot;
   - git config user.email &quot;你的邮箱&quot;
   - sed -i'' &quot;s~https://github.com/Fantasy9527/alili.tech.git~https://${ACCESS_TOKEN}@github.com/Fantasy9527/alili.tech.git~&quot; _config.yml
-  - sed -i'' &quot;s~https://git.coding.net/incomparable9527/incomparable9527.coding.me.git~https://incomparable9527:${CODING_ACCESS_TOKEN}@git.dev.tencent.com/incomparable9527/incomparable9527.coding.me.git~&quot; _config.yml
 script:
   - hexo clean
   - hexo g
