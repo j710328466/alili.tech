@@ -6,28 +6,10 @@
     <description>Recent content in 前端自动化 on Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 14 Jun 2015 23:36:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2015 23:15:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/tags/%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>自动化部署前端代码 - grunt-ftp-deploy的使用</title>
-      <link>https://alili.tech/archive/20901007/</link>
-      <pubDate>Sun, 14 Jun 2015 23:36:00 +0000</pubDate>
-      
-      <guid>https://alili.tech/archive/20901007/</guid>
-      <description>每一次修改完代码之后,要部署到远程的服务器,我的操作步骤是:
-修改代码 &amp;ndash;&amp;gt; grunt build &amp;ndash;&amp;gt; 打开FileZilla &amp;ndash;&amp;gt;登录ftp服务器 &amp;ndash;&amp;gt;找到本地文件夹 &amp;ndash;&amp;gt; 找到远程服务器目标文件夹 &amp;ndash;&amp;gt;全选本地文件 &amp;ndash;&amp;gt; 上传
-因为部署代码,在某个时候会特别频繁.每一次都要重复上面的八个操作.表示要做点什么,改变一下.
-今天我们的主角:grunt-ftp-deploy
-如果是sftp可以使用grunt-sftp-deploy
-安装:
-npm install grunt-ftp-deploy --save-dev or npm install grunt-sftp-deploy --save-dev  在与Gruntfile文件同一目录,我们新建一个&amp;rdquo;.ftppass&amp;rdquo;的文件, 里面是ftp的授权信息, 内容如下:
-{ &amp;quot;key1&amp;quot;: { &amp;quot;username&amp;quot;: &amp;quot;username&amp;quot;, &amp;quot;password&amp;quot;: &amp;quot;password&amp;quot; } }  Gruntfile配置代码:
-//ftp-deploy grunt.initConfig({ &#39;ftp-deploy&#39;: { build: { auth: { host: &#39;192.168.1.245&#39;, //ftp服务器的ip地址 port: 21,//服务器端口 authKey: &#39;key1&#39;//.ftppass文件里,key1的授权信息 }, src: &#39;path/to/source/folder&#39;,//本地文件夹 dest: &#39;/path/to/destination/folder&#39;,//服务器的目标文件夹 exclusions: [&#39;path/to/source/folder/**/.DS_Store&#39;]//不上传的文件 } } })  or
-//sftp-deploy grunt.</description>
-    </item>
     
     <item>
       <title>烦人的Angularjs注解 - grunt-ng-annotate的使用</title>
