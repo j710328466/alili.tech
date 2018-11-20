@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://alili.tech/archive/oj8dtatmwzg/</loc>
+    <lastmod>2018-11-20T16:14:25+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://alili.tech/archive/o1yodyym19t/</loc>
     <lastmod>2018-11-20T02:30:10+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -9950,7 +9957,7 @@
   
   <url>
     <loc>https://alili.tech/</loc>
-    <lastmod>2018-11-20T02:30:10+00:00</lastmod>
+    <lastmod>2018-11-20T16:14:25+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -9964,7 +9971,7 @@
   
   <url>
     <loc>https://alili.tech/archive/</loc>
-    <lastmod>2018-11-20T02:30:10+00:00</lastmod>
+    <lastmod>2018-11-20T16:14:25+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -10012,7 +10019,7 @@
   
   <url>
     <loc>https://alili.tech/tags/hexo/</loc>
-    <lastmod>2018-11-13T21:32:05+00:00</lastmod>
+    <lastmod>2018-11-20T16:14:25+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -10033,7 +10040,7 @@
   
   <url>
     <loc>https://alili.tech/tags/hugo/</loc>
-    <lastmod>2018-11-19T16:14:25+00:00</lastmod>
+    <lastmod>2018-11-20T16:14:25+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -10130,6 +10137,13 @@
   </url>
   
   <url>
+    <loc>https://alili.tech/tags/travis/</loc>
+    <lastmod>2018-11-20T16:14:25+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://alili.tech/tags/trending/</loc>
     <lastmod>2018-11-08T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -10209,6 +10223,13 @@
   <url>
     <loc>https://alili.tech/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</loc>
     <lastmod>2018-11-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://alili.tech/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/</loc>
+    <lastmod>2018-11-20T16:14:25+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
