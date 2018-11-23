@@ -6,10 +6,31 @@
     <description>Recent content in 前端周刊 on Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 16 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/tags/%E5%89%8D%E7%AB%AF%E5%91%A8%E5%88%8A/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Alili Weekly 前端周刊 第八期</title>
+      <link>https://alili.tech/archive/l1gp8abhpha/</link>
+      <pubDate>Fri, 23 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/l1gp8abhpha/</guid>
+      <description>ES6 元编程资源集合 关于 Proxy &amp;amp; Reflect &amp;amp; Symbol，关于 Meta Programming。
+JavaScript,Proxy,Reflect,Symbol
+2018 你应该知道的 Web 性能信息采集指南 信息量巨大的 Web 性能信息采集指南。
+性能优化,JavaScript,性能监控
+Liftoff: V8 引擎中全新的 WebAssembly baseline 编译器 V8 引擎在 v6.9 版本中加入了一个全新的 WebAssembly baseline 编译器 —— Liftoff。它目前在桌面系统平台上是默认开启的。本文将会详细讲解引入新的编译层的动机，并介绍一下 Liftoff 的具体实现以及性能情况。
+WebAssembly,JavaScript,V8
+让你的 Webpack 起飞：考拉会员后台 Webpack 优化实战 Webpack 优化实战记录。
+Webpack
+15000 字谈程序员的职业生涯重要的几个阶段 本文内容来自于 CatChen 在第四届FEDAY上关于“点开你的技能树”的演讲。
+职业
+借助 wbr 标签实现连续英文字符的精准换行 如题。（忽略标题，直接读原文吧哈哈哈。）
+HTML
+专访尤雨溪：先别管 4.0了，Vue CLI 重构了解一下 “上个月 Vue CLI 3.0 正式发布，为很多开发者带来期待已久的新特性，尤雨溪也说 Vue CLI 3.0 经历了重构，旨在尽可能减少现代前端工具在配置上的烦恼，并尽可能在工具链中加入最佳实践，让其成为 Vue 应用程序的默认实践。”</description>
+    </item>
     
     <item>
       <title>Alili Weekly 前端周刊 第七期</title>

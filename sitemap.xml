@@ -353,6 +353,13 @@
   </url>
   
   <url>
+    <loc>https://alili.tech/archive/l1gp8abhpha/</loc>
+    <lastmod>2018-11-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://alili.tech/archive/m0dh1jehijf/</loc>
     <lastmod>2018-11-22T11:48:10+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -11335,14 +11342,14 @@
   
   <url>
     <loc>https://alili.tech/tags/weekly/</loc>
-    <lastmod>2018-11-16T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://alili.tech/tags/%E5%89%8D%E7%AB%AF%E5%91%A8%E5%88%8A/</loc>
-    <lastmod>2018-11-16T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
