@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://alili.tech/archive/1479pecm0mbo/</loc>
+    <lastmod>2018-11-30T14:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://alili.tech/archive/myezywunfyd/</loc>
     <lastmod>2018-11-30T02:30:12+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -14640,7 +14647,7 @@
   
   <url>
     <loc>https://alili.tech/</loc>
-    <lastmod>2018-11-30T02:30:12+00:00</lastmod>
+    <lastmod>2018-11-30T14:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -14661,7 +14668,7 @@
   
   <url>
     <loc>https://alili.tech/archive/</loc>
-    <lastmod>2018-11-30T02:30:12+00:00</lastmod>
+    <lastmod>2018-11-30T14:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -14674,7 +14681,7 @@
   
   <url>
     <loc>https://alili.tech/tags/code-review/</loc>
-    <lastmod>2018-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-30T14:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>

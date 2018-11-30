@@ -6,10 +6,23 @@
     <description>Recent content in Code Review on Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 12 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Nov 2018 14:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/tags/code-review/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>让团队保持Code Review习惯的三大法宝</title>
+      <link>https://alili.tech/archive/1479pecm0mbo/</link>
+      <pubDate>Fri, 30 Nov 2018 14:00:00 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/1479pecm0mbo/</guid>
+      <description>之前跟大家聊过代码审查,想要再团队中保持团队代码审查习惯,是相当困难的. 我们必须要有绝对的流程,工具与制度的支持,才能基本保证我们代码审查效率与质量.
+流程支持:Gitflow 之前有介绍Gitflow的工作流.大致如下: - 开发者在本地仓库中新建一个专门的分支开发功能。 - 开发者push分支修改到公开的Git仓库中。 - 开发者通过Git发起一个Merge Request。 - 团队的其它成员代码审查，讨论并修改。 - 项目维护者合并功能到官方仓库中并关闭Merge Request。
+工具支持 强制使用eslint 强制使用eslint,在代码还未提交,代码风格就已经在编写的时候保持一致.
+规范提交代码的类型 我们自己内部开发了一款简单的命令行工具,可以在我们提交代码的时候,定义本次提交的类型.可以方便我们在代码审查的时候理解修改的内容.
+类型如下  bug修复 新特性 样式修复 代码重构 测试代码 代码回滚 bug修复 文档更新 临时提交  命令行使用方式 ? What do you want to do? 代码提交 ? 请选择Git提交类型？ (Use arrow keys) ❯ * fixed : bug修复 * feature : 新特性 * style : 样式修复 * refactor : 代码重构 * test : 测试代码 * revert : 代码回滚 * doc : 文档更新 (Move up and down to reveal more choices)  Code Climate Code Climate是一款代码测试工具,它可以帮助你进行代码冗余检测、质量评估，同时支持多种语言，如PHP, Ruby, JavaScript, CSS, Golang, Python 等。</description>
+    </item>
     
     <item>
       <title>Code Review工具推荐以及使用报告</title>
