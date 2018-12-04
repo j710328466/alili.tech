@@ -6,10 +6,31 @@
     <description>Recent content in Code Review on Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 30 Nov 2018 14:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/tags/code-review/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>使用husky提升Code Review的效率</title>
+      <link>https://alili.tech/archive/i9t0x2tvleo/</link>
+      <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/i9t0x2tvleo/</guid>
+      <description>在code review的时候,代码风格是其中审查的指标之一.在审查代码风格其实是有一定工作量的. 为了减少代码审查的工作量,我们何不把代码风格在提交代码之前就规范掉呢? 这样我们就可以在代码审查中节约出很多时间,来做更多的其他更有意义的事情.
+git hooks 在git中提供了hook,就是在代码提交,push等一系列操作阶段的时候,提供了触发其他程序的钩子.
+如何操作,本文不多赘述.
+有兴趣的同学可以查看文档: https://git-scm.com/docs/githooks
+husky 如果看过githooks的文档,是不是觉得会有一点繁琐?
+这里介绍一个工具 husky 可以解决你的问题.
+安装 npm install -D husky yarn add --dev husky  然后修改 package.json，增加配置：
+{ &amp;quot;scripts&amp;quot;: { &amp;quot;precommit&amp;quot;: &amp;quot;eslint .&amp;quot; } }  最后尝试 Git 提交，你就会很快收到反馈：
+git commit -m &amp;quot;this is a commit&amp;quot;  这样,我们就可以在代码提交之前验证一下全局的eslint是否正确.
+对于一些以前从来没有用过eslint的项目.突然以这种形式引入.
+你可能面临的是把所有文件都按照eslint都格式化一遍.
+lint-staged 这里再安利一个工具,可以实现 eslint只检查本次提交的文件.
+安装 npm install -D lint-staged yarn add --dev lint-staged  修改 package.json 配置： { &amp;quot;scripts&amp;quot;: { &amp;quot;precommit&amp;quot;: &amp;quot;lint-staged&amp;quot; }, &amp;quot;lint-staged&amp;quot;: { &amp;quot;src/**/*.</description>
+    </item>
     
     <item>
       <title>让团队保持Code Review习惯的三大法宝</title>
