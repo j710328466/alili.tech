@@ -24,12 +24,13 @@ git hooks 在git中提供了hook,就是在触发代码提交,push等一系列操
 husky 如果看过githooks的文档,是不是觉得会有一点繁琐?
 这里介绍一个工具 husky 可以解决你的问题.
 安装 npm install husky --save-dev  然后修改 package.json，增加配置：
-{ &amp;quot;husky&amp;quot;: { &amp;quot;hooks&amp;quot;: { &amp;quot;pre-commit&amp;quot;: &amp;quot;eslint .&amp;quot; } }, }  最后尝试 Git 提交，你就会很快收到反馈：
+{ &amp;quot;husky&amp;quot;: { &amp;quot;hooks&amp;quot;: { &amp;quot;pre-commit&amp;quot;: &amp;quot;eslint .&amp;quot; } }, }  如果你只是局部安装了 eslint,请使用以下配置
+{ &amp;quot;lint-staged&amp;quot;: { &amp;quot;src/**/*.js&amp;quot;: [ &amp;quot;node_modules/.bin/eslint&amp;quot; ] }, }  最后尝试 Git 提交，你就会很快收到反馈：
 git commit -m &amp;quot;this is a commit&amp;quot;  这样,我们就可以在代码提交之前验证一下我们的代码lint是否通过.
 对于一些以前从来没有用过eslint的项目来说.突然引入这种工具.
 你可能面临的是把所有文件都按照eslint都格式化一遍.那不是疯了吗?
 lint-staged 这里再安利一个工具,可以实现 eslint只检查本次提交的文件. 这样我们就可以做到渐进式的改善我们的代码质量.
-安装 npm install lint-staged --save-dev  修改 package.json 配置： { &amp;quot;husky&amp;quot;: { &amp;quot;hooks&amp;quot;: { &amp;quot;pre-commit&amp;quot;: &amp;quot;lint-staged&amp;quot; } }, &amp;quot;lint-staged&amp;quot;: { &amp;quot;src/**/*.</description>
+安装 npm install lint-staged --save-dev  修改 package.</description>
     </item>
     
     <item>

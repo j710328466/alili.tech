@@ -24,6 +24,13 @@ git hooks 在git中提供了hook,就是在触发代码提交,push等一系列操
     }
   },
 }
+</code></pre><p>如果你只是局部安装了 <code>eslint</code>,请使用以下配置</p><pre><code class="language-json">{
+    &quot;lint-staged&quot;: {
+    &quot;src/**/*.js&quot;: [
+      &quot;node_modules/.bin/eslint&quot;
+    ]
+  },
+}
 </code></pre><p>最后尝试 Git 提交，你就会很快收到反馈：</p><pre><code class="language-bash">git commit -m &quot;this is a commit&quot;
 </code></pre><p>这样,我们就可以在代码提交之前验证一下我们的代码lint是否通过.</p><p>对于一些以前从来没有用过eslint的项目来说.突然引入这种工具.</p><p>你可能面临的是把所有文件都按照eslint都格式化一遍.那不是疯了吗?</p><h1 id="lint-staged">lint-staged</h1><p>这里再安利一个工具,可以实现 eslint只检查本次提交的文件. 这样我们就可以做到渐进式的改善我们的代码质量.</p><h3 id="安装-1">安装</h3><pre><code class="language-bash">npm install lint-staged --save-dev
 </code></pre><h3 id="修改-package-json-配置">修改 package.json 配置：</h3><pre><code class="language-json">{
