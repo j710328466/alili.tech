@@ -6,10 +6,26 @@
     <description>Recent content in Trending on Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 08 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 08 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/tags/trending/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2018年12月Github Javascript开源项目精选</title>
+      <link>https://alili.tech/archive/zm2u9iewb9d/</link>
+      <pubDate>Sat, 08 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/zm2u9iewb9d/</guid>
+      <description>GitSquared / edex-ui : 5,808 stars this month
+A science fiction terminal emulator designed for large touchscreens that runs on all major OSs.
+vuejs / vue : 3,471 stars this month
+🖖 A progressive, incrementally-adoptable JavaScript framework for building UI on the web.
+leonardomso / 33-js-concepts : 3,471 stars this month
+📜 33 concepts every JavaScript developer should know.
+tensorspace-team / tensorspace : 3,205 stars this month
+Neural network 3D visualization framework, build interactive and intuitive model in browsers, support pre-trained deep learning models from TensorFlow, Keras, TensorFlow.</description>
+    </item>
     
     <item>
       <title>2018年11月Github Javascript开源项目精选</title>
