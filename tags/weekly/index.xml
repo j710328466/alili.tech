@@ -6,10 +6,37 @@
     <description>Recent content in Weekly on Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 07 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/tags/weekly/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Alili Weekly 前端周刊 第十一期</title>
+      <link>https://alili.tech/archive/fva8fa69c4d/</link>
+      <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/fva8fa69c4d/</guid>
+      <description>漫谈前端性能，突破 React 应用瓶颈 当我们在谈论性能时，到底在说什么？基于 React 框架开发的应用，在性能上又有哪些特点？这篇文章我们从浏览器和 JavaScript 引擎角度来剖析前端性能，同时创新 React，充分利用浏览器能力突破局限。
+JavaScript,React,性能
+前端也需要了解的 JSONP 安全 看到这篇文章，我偷偷反思了下自己的代码。。。
+安全,JSONP,JavaScript
+mobx 源码分析 “mobx 源码分析” 包含两篇文章：《 构造响应式数据》、《订阅响应式数据》。
+JavaScript,mobx
+洞察 video 超能力系列：玩转 flv Yet another video player~ BTW 强推一波奇舞团出品的 Chimee 播放器。
+video,flv
+优化 MP4 视频以获得更快的流传输速度 “视频文件必须经过适当优化才能作为 HTML5 视频在线播放。如果没有这种优化，视频可能会延迟数百毫秒，而只是试图播放视频的访问者也可能会浪费兆字节的带宽。”
+MP4,优化,video
+CSS 实现抛物线运动效果 CSS3 animation 也能实现抛物线效果。水平和垂直运动使用不同的 timing-function 即可。
+CSS,动画
+Vue CLI 3.0正式发布，带来多项重大更新 Vue CLI 的核心目标是为基于 Webpack 4 构建的预配置提供构建设置，目标是最大限度地减少开发人员配置的次数。
+Vue
+玉伯：我们是如何从前端技术进化到体验科技的？ 玉伯分享他从前端一路进阶升级到体验科技的个人思考，并详细介绍了体验科技的历史及未来发展。
+奇舞推荐,技术发展,体验科技
+改变用户体验的滚动新特性 时至今日，CSS 中为滚动提供的相关新特性究竟能给用户带来哪些新的体验呢？
+奇舞推荐,CSS,动画
+聊聊 CSS 中的层叠相关概念 很系统的总结。</description>
+    </item>
     
     <item>
       <title>Alili Weekly 前端周刊 第十期</title>
