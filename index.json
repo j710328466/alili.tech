@@ -366,6 +366,12 @@
         "description": ""
     },
     {
+        "uri": "https://alili.tech/archive/unui11c01ml/",
+        "title": "记2018年最后一次前端分享",
+        "tags": ["Slides"],
+        "description": ""
+    },
+    {
         "uri": "https://alili.tech/archive/uizh28mrqmo/",
         "title": "20道HTML基础面试题（附答案）",
         "tags": [],
@@ -17528,6 +17534,12 @@
     {
         "uri": "https://alili.tech/tags/seo/",
         "title": "Seo",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/tags/slides/",
+        "title": "Slides",
         "tags": [],
         "description": ""
     },
