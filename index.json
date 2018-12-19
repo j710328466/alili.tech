@@ -360,6 +360,12 @@
         "description": ""
     },
     {
+        "uri": "https://alili.tech/archive/i15aswl1v4s/",
+        "title": "Angular 7 + Electron 桌面应用开坑",
+        "tags": ["Electron", "Angular"],
+        "description": ""
+    },
+    {
         "uri": "https://alili.tech/archive/xie47l8wsb9/",
         "title": "30s js代码片段 翻译",
         "tags": [],
@@ -19226,6 +19232,12 @@
     {
         "uri": "https://alili.tech/tags/database/",
         "title": "Database",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/tags/electron/",
+        "title": "Electron",
         "tags": [],
         "description": ""
     },
