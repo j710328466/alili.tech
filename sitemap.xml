@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://alili.tech/archive/cr8ze8vvvbw/</loc>
+    <lastmod>2018-12-20T19:02:36+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://alili.tech/archive/8utgx6tlp7m/</loc>
     <lastmod>2018-12-20T02:30:10+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -22816,14 +22823,14 @@
   
   <url>
     <loc>https://alili.tech/</loc>
-    <lastmod>2018-12-20T02:30:10+00:00</lastmod>
+    <lastmod>2018-12-20T19:02:36+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://alili.tech/tags/angular/</loc>
-    <lastmod>2018-12-19T19:02:36+00:00</lastmod>
+    <lastmod>2018-12-20T19:02:36+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -22837,7 +22844,7 @@
   
   <url>
     <loc>https://alili.tech/archive/</loc>
-    <lastmod>2018-12-20T02:30:10+00:00</lastmod>
+    <lastmod>2018-12-20T19:02:36+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -22871,7 +22878,7 @@
   
   <url>
     <loc>https://alili.tech/tags/electron/</loc>
-    <lastmod>2018-12-19T19:02:36+00:00</lastmod>
+    <lastmod>2018-12-20T19:02:36+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -23011,7 +23018,7 @@
   
   <url>
     <loc>https://alili.tech/tags/</loc>
-    <lastmod>2018-12-19T19:02:36+00:00</lastmod>
+    <lastmod>2018-12-20T19:02:36+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
