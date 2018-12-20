@@ -423,6 +423,13 @@
   </url>
   
   <url>
+    <loc>https://alili.tech/archive/pw9ygknqvso/</loc>
+    <lastmod>2018-12-19T19:02:36+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://alili.tech/archive/mhwo39h5u6/</loc>
     <lastmod>2018-12-19T02:30:08+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -22816,7 +22823,7 @@
   
   <url>
     <loc>https://alili.tech/tags/angular/</loc>
-    <lastmod>2018-12-18T19:02:36+00:00</lastmod>
+    <lastmod>2018-12-19T19:02:36+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -22864,7 +22871,7 @@
   
   <url>
     <loc>https://alili.tech/tags/electron/</loc>
-    <lastmod>2018-12-18T19:02:36+00:00</lastmod>
+    <lastmod>2018-12-19T19:02:36+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -23004,7 +23011,7 @@
   
   <url>
     <loc>https://alili.tech/tags/</loc>
-    <lastmod>2018-12-18T19:02:36+00:00</lastmod>
+    <lastmod>2018-12-19T19:02:36+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>

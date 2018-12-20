@@ -360,6 +360,12 @@
         "description": ""
     },
     {
+        "uri": "https://alili.tech/archive/pw9ygknqvso/",
+        "title": "Angular7 + Electron主进程与渲染进程通讯问题",
+        "tags": ["Electron", "Angular"],
+        "description": ""
+    },
+    {
         "uri": "https://alili.tech/archive/mhwo39h5u6/",
         "title": "vue+element实现表格跨行或跨列合并",
         "tags": [],
@@ -721,7 +727,7 @@
     },
     {
         "uri": "https://alili.tech/archive/i15aswl1v4s/",
-        "title": "Angular7 + Electron 桌面应用开坑",
+        "title": "从零搭建 Angular7 + Electron 桌面应用",
         "tags": ["Electron", "Angular"],
         "description": ""
     },
