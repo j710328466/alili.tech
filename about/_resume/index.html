@@ -21,7 +21,7 @@ npm start // 映射的是grunt serve
         avatar:'robohash',
         notify:true,
         verify:true
-    });</script><ul id="more-post-list" class="archive readmore"><h3>其他推荐</h3><li><a href="/archive/muh28ezjeur/">2017年经历的那些灵异事件<aside class="dates">2018-12-22</aside></a></li><li><a href="/archive/l2exddl087q/">ES6/JavaScript一些‘巧用’<aside class="dates">2018-12-22</aside></a></li><li><a href="/archive/t6sx8vvqir/">JavaScript 基础知识 - DOM篇(二)<aside class="dates">2018-12-22</aside></a></li><li><a href="/archive/oziypuaap2m/">JavaScript基础拾遗<aside class="dates">2018-12-22</aside></a></li><li><a href="/archive/lpsw6gozdjf/">React Ref or Not?<aside class="dates">2018-12-22</aside></a></li><li><a href="/archive/hbd3hm21v94/">React系列——socket.io群聊系统在react的实现<aside class="dates">2018-12-22</aside></a></li><li><a href="/archive/pl6bkvedxq/">RxJS: 详解forkJoin, zip, combineLatest之间的区别<aside class="dates">2018-12-22</aside></a></li><li><a href="/archive/aplso6q597i/">Vue单页面骨架屏实践<aside class="dates">2018-12-22</aside></a></li><li><a href="/archive/uxnq74lzrpc/">Weex在达人店的一年实践<aside class="dates">2018-12-22</aside></a></li><li><a href="/archive/s1zbjoxzhn/">[Webpack并不难]使用教程（四）--- devServer<aside class="dates">2018-12-22</aside></a></li></ul></section></div><footer id="footer"><div class="footer-left">Copyright © 2018 Fan <a href="http://www.miitbeian.gov.cn" rel="external nofollow noopener noreferrer" target="_blank">浙ICP备18045521号</a></div><div class="footer-right"><nav><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></nav></div></footer><script src="https://alili.tech/lib/justified-gallery/jquery.justifiedGallery.min.js"></script><script src="https://alili.tech/lib/typed.js"></script><script src="https://alili.tech/js/main.js"></script><script async src=""></script><script>(function(){
+    });</script><ul id="more-post-list" class="archive readmore"><h3>其他推荐</h3><li><a href="/archive/l793a95m0e/">4 张动图解释为什么（什么时候）使用 Redux<aside class="dates">2018-12-24</aside></a></li><li><a href="/archive/f5kje3z4jq/">CSS: hover选择器的使用<aside class="dates">2018-12-24</aside></a></li><li><a href="/archive/081j1hr3178e/">CSS: 潜藏着的BFC<aside class="dates">2018-12-24</aside></a></li><li><a href="/archive/1lsilnwzcxm/">JavaScript执行顺序分析<aside class="dates">2018-12-24</aside></a></li><li><a href="/archive/81nyove1ci7/">PDF、PPT、Excel、Word、视频等格式文件在线预览<aside class="dates">2018-12-24</aside></a></li><li><a href="/archive/kvbqzkrms2/">React项目实战：react-redux-router基本原理<aside class="dates">2018-12-24</aside></a></li><li><a href="/archive/w33bnr6hed/">React项目实战：环境搭建<aside class="dates">2018-12-24</aside></a></li><li><a href="/archive/7gonh1lnf2b/">SVG 扬帆起航<aside class="dates">2018-12-24</aside></a></li><li><a href="/archive/fz1du8oyqs5/">SegmentFault 社区访谈 | Aresn：重量级的 iView 作者<aside class="dates">2018-12-24</aside></a></li><li><a href="/archive/n329lmiz0rh/">VS Code上手与超实用插件安利<aside class="dates">2018-12-24</aside></a></li></ul></section></div><footer id="footer"><div class="footer-left">Copyright © 2018 Fan <a href="http://www.miitbeian.gov.cn" rel="external nofollow noopener noreferrer" target="_blank">浙ICP备18045521号</a></div><div class="footer-right"><nav><ul><li><a href="/">Home</a></li><li><a href="/archive/">Archives</a></li><li><a href="/about/">About</a></li><li><a href="http://github.com/Fantasy9527" target="_blank">Github</a></li></ul></nav></div></footer><script src="https://alili.tech/lib/justified-gallery/jquery.justifiedGallery.min.js"></script><script src="https://alili.tech/lib/typed.js"></script><script src="https://alili.tech/js/main.js"></script><script async src=""></script><script>(function(){
   if(location.host!=='alili.tech')return;
   var ga = document.createElement('script');
   var curProtocol = window.location.protocol.split(':')[0];
@@ -45,4 +45,15 @@ npm start // 映射的是grunt serve
       }
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(bp, s);
-  })();</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></body></html>
+  })();</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+          navigator.serviceWorker
+              .register('./sw.js')
+              .then(registration => {
+                  console.log('SW registered: ', registration);
+              })
+              .catch(registrationError => {
+                  console.log('SW registration failed: ', registrationError);
+              });
+      });
+  }</script></body></html>
