@@ -44,11 +44,11 @@ self.__precacheManifest = [
   },
   {
     "url": "lib/font-awesome/css/font-awesome.css",
-    "revision": "b652e3b759188ceaf79182f2fe72ea64"
+    "revision": "38021bc5f4c004f5afbee38855ba260f"
   },
   {
     "url": "lib/font-awesome/css/font-awesome.min.css",
-    "revision": "4083f5d376eb849a458cc790b53ba080"
+    "revision": "48ab1883875b3c7f06592dd04eb2c297"
   },
   {
     "url": "lib/font-awesome/fonts/fontawesome-webfont.woff",
