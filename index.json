@@ -1,8 +1,8 @@
 [
     {
-        "uri": "https://alili.tech/archive/cue4m2rioxl/",
-        "title": "Centos7 如何使用yum升级git到最新版本",
-        "tags": ["Linux"],
+        "uri": "https://alili.tech/archive/ijfdh4ry66c/",
+        "title": "Typescript的福音 json转interface vscode 插件",
+        "tags": ["Typescript"],
         "description": ""
     },
     {
@@ -423,6 +423,12 @@
         "uri": "https://alili.tech/archive/2otmqr4iqgw/",
         "title": "《javascript高级程序设计》笔记：变量对象与预解析",
         "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/cue4m2rioxl/",
+        "title": "Centos7 如何使用yum升级git到最新版本",
+        "tags": ["Linux"],
         "description": ""
     },
     {
@@ -21602,6 +21608,12 @@
     {
         "uri": "https://alili.tech/tags/trending/",
         "title": "Trending",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/tags/typescript/",
+        "title": "Typescript",
         "tags": [],
         "description": ""
     },
