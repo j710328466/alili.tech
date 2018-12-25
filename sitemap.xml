@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://alili.tech/archive/3f6742b1/</loc>
+    <lastmod>2018-12-25T20:32:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://alili.tech/archive/6qp6gv1xc0b/</loc>
     <lastmod>2018-12-25T02:30:11+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -24987,7 +24994,7 @@
   
   <url>
     <loc>https://alili.tech/</loc>
-    <lastmod>2018-12-25T02:30:11+00:00</lastmod>
+    <lastmod>2018-12-25T20:32:05+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -25008,7 +25015,7 @@
   
   <url>
     <loc>https://alili.tech/archive/</loc>
-    <lastmod>2018-12-25T02:30:11+00:00</lastmod>
+    <lastmod>2018-12-25T20:32:05+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -25098,7 +25105,7 @@
   
   <url>
     <loc>https://alili.tech/tags/linux/</loc>
-    <lastmod>2018-07-30T20:32:05+00:00</lastmod>
+    <lastmod>2018-12-25T20:32:05+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
