@@ -6,10 +6,22 @@
     <description>Recent content in Angular on Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 20 Dec 2018 19:02:36 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Dec 2018 22:17:36 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/tags/angular/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Angular路径别名配置</title>
+      <link>https://alili.tech/archive/3u54dxnerfn/</link>
+      <pubDate>Thu, 27 Dec 2018 22:17:36 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/3u54dxnerfn/</guid>
+      <description>angular cli 内置了 webpack,所以也是可以配置路径别名的. 而且配置的方式几乎是一样的.
+配置路径别名 找到你的项目根目录的 tsconfig.json 文件.
+注意: 如果你的配置不生效,需要查看你的baseUrl是否配置正确.
+{ &amp;quot;compilerOptions&amp;quot;: { &amp;quot;baseUrl&amp;quot;: &amp;quot;./src/&amp;quot;, &amp;quot;paths&amp;quot;: { &amp;quot;@app/*&amp;quot;: [&amp;quot;app/*&amp;quot;], &amp;quot;@services/*&amp;quot;: [&amp;quot;app/services/*&amp;quot;] } } }  配置之前 import { Api } from &#39;../../../../../services/api.service&#39;; import { xxx } from &#39;../../../../../services/api.xxx&#39;;  配置之后 import { ApiService } from &#39;@services/api.service&#39;; import { xxx } from &#39;@services/api.xxx&#39;;  一些开发中的小技巧,希望可以帮到你.</description>
+    </item>
     
     <item>
       <title>推荐一个Angular Electron 开箱即用的项目工程模板</title>
