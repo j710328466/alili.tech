@@ -6,10 +6,26 @@
     <description>Recent content in Javascript on Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 26 Nov 2018 11:46:35 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Jan 2019 17:33:33 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>聊聊Abstract syntax tree 抽象语法树</title>
+      <link>https://alili.tech/archive/9rfliipfkip/</link>
+      <pubDate>Thu, 03 Jan 2019 17:33:33 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/9rfliipfkip/</guid>
+      <description>抽象语法树 AST 在计算机科学中，抽象语法树，或简称语法树，是源代码语法结构的一种抽象表示.
+这里介绍一个网站 https://astexplorer.net ,可以让你清晰的看到一段js,css以及其他语言被转换成语法树的对比.
+在我们的浏览器中,会对我们的js代码解析成抽象语法书然后再进一步的分析以及下一步的操作.
+语法树就前端而言,被利用在各种地方,代码语法的检查，代码风格的检查，代码的格式化，代码的高亮，代码错误提示，代码自动补全,比如:
+ eslint JSHint babel webpack rollup UglifyJS2  等等等等&amp;hellip; 根本数不过来.
+举个例子 一段代码被解析成语法树后的样子 目前业界对抽象语法树是有规范的, 感兴趣的朋友可以查看这个网址: SpiderMonkey
+let str =&#39;我是字符串&#39;;  to AST
+{ &amp;quot;type&amp;quot;: &amp;quot;Program&amp;quot;, &amp;quot;start&amp;quot;: 0, &amp;quot;end&amp;quot;: 17, &amp;quot;body&amp;quot;: [ { &amp;quot;type&amp;quot;: &amp;quot;VariableDeclaration&amp;quot;, &amp;quot;start&amp;quot;: 0, &amp;quot;end&amp;quot;: 17, &amp;quot;declarations&amp;quot;: [ { &amp;quot;type&amp;quot;: &amp;quot;VariableDeclarator&amp;quot;, &amp;quot;start&amp;quot;: 4, &amp;quot;end&amp;quot;: 16, &amp;quot;id&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;Identifier&amp;quot;, &amp;quot;start&amp;quot;: 4, &amp;quot;end&amp;quot;: 7, &amp;quot;name&amp;quot;: &amp;quot;str&amp;quot; }, &amp;quot;init&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;Literal&amp;quot;, &amp;quot;start&amp;quot;: 9, &amp;quot;end&amp;quot;: 16, &amp;quot;value&amp;quot;: &amp;quot;我是字符串&amp;quot;, &amp;quot;raw&amp;quot;: &amp;quot;&#39;我是字符串&#39;&amp;quot; } } ], &amp;quot;kind&amp;quot;: &amp;quot;let&amp;quot; } ], &amp;quot;sourceType&amp;quot;: &amp;quot;module&amp;quot; }  使用Nodejs解析代码为抽象语法树 常用js解析工具  esprima traceur acorn shift  使用esprima举个例子 # node环境 &amp;gt; var esprima = require(&#39;esprima&#39;); &amp;gt; var program = &#39;const answer = 42&#39;; &amp;gt; esprima.</description>
+    </item>
     
     <item>
       <title>从前端角度来看声明式编程与命令式编程</title>
