@@ -6,10 +6,26 @@
     <description>Recent content in Trending on Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 08 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/tags/trending/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2019年01月Github Javascript开源项目精选</title>
+      <link>https://alili.tech/archive/gpjoaq9yztd/</link>
+      <pubDate>Tue, 08 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/gpjoaq9yztd/</guid>
+      <description>GoogleChromeLabs / quicklink : 4,752 stars this month
+⚡️Faster subsequent page-loads by prefetching in-viewport links during idle time
+i0natan / nodebestpractices : 3,551 stars this month
+The largest Node.js best practices list (January 2019)
+leonardomso / 33-js-concepts : 3,354 stars this month
+📜 33 concepts every JavaScript developer should know.
+vuejs / vue : 3,087 stars this month
+🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.</description>
+    </item>
     
     <item>
       <title>2018年12月Github Javascript开源项目精选</title>
