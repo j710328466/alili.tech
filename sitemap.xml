@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://alili.tech/archive/ltucv5fyj9/</loc>
+    <lastmod>2019-01-08T19:33:33+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://alili.tech/archive/5rx8zm0bjxg/</loc>
     <lastmod>2019-01-08T02:30:11+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -32085,7 +32092,7 @@
   
   <url>
     <loc>https://alili.tech/</loc>
-    <lastmod>2019-01-08T02:30:11+00:00</lastmod>
+    <lastmod>2019-01-08T19:33:33+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -32106,7 +32113,7 @@
   
   <url>
     <loc>https://alili.tech/archive/</loc>
-    <lastmod>2019-01-08T02:30:11+00:00</lastmod>
+    <lastmod>2019-01-08T19:33:33+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -32309,6 +32316,13 @@
   <url>
     <loc>https://alili.tech/tags/upsource/</loc>
     <lastmod>2018-09-29T19:33:33+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://alili.tech/tags/visual-studio-code/</loc>
+    <lastmod>2019-01-08T19:33:33+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

@@ -1,5 +1,11 @@
 [
     {
+        "uri": "https://alili.tech/archive/ltucv5fyj9/",
+        "title": "Visual Studio Code 下的 jsconfig.json",
+        "tags": ["Visual Studio Code"],
+        "description": ""
+    },
+    {
         "uri": "https://alili.tech/archive/5rx8zm0bjxg/",
         "title": "19+ 个 JavaScript 快速编程技巧 — SitePoint",
         "tags": [],
@@ -27692,6 +27698,12 @@
     {
         "uri": "https://alili.tech/tags/upsource/",
         "title": "Upsource",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/tags/visual-studio-code/",
+        "title": "Visual Studio Code",
         "tags": [],
         "description": ""
     },
