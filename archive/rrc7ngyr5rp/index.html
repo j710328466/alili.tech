@@ -18,6 +18,8 @@ Please move or remove them before you can switch branches.
 Aborting
 </code></pre><h1 id="解决办法">解决办法</h1><p>设置为大小写敏感(问题解决后,一定要还原配置)</p><pre><code class="language-bash">git config core.ignorecase false
 </code></pre><p>尽管设置大小写敏感之后,始终会影响其他分支的代码,所以不建议一直使用这个配置,当问题解决之后,还是要改回去.</p><h1 id="改回默认">改回默认</h1><pre><code class="language-bash">git config core.ignorecase true
+# or
+git config --unset core.ignorecase
 </code></pre><h1 id="尾巴">尾巴</h1><p>平时编码的时候,还是千万不要直接重命名大小写,自己本地看起来没有什么问题.在别人问题上却是大问题.</p><p>如果发生了类似问题的,应该在源头解决(谁机器上重命名的,谁改回去).如果不解决的,应该拖出去打~~</p><h2>本文链接：</h2><a href="https://alili.tech/archive/rrc7ngyr5rp/" target="_blank">https://alili.tech/archive/rrc7ngyr5rp/</a></div></article><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><div class="blog-post-comments"></div><script>new Valine({
         el: '.blog-post-comments', 
         app_id: 'ItyOVb4I33bTwprf3cY6uqMc-gzGzoHsz', 
