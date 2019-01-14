@@ -2642,6 +2642,13 @@
   </url>
   
   <url>
+    <loc>https://alili.tech/archive/rrc7ngyr5rp/</loc>
+    <lastmod>2019-01-09T19:33:33+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://alili.tech/archive/303s2wo8l7x/</loc>
     <lastmod>2019-01-09T02:30:12+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -35325,7 +35332,7 @@
   
   <url>
     <loc>https://alili.tech/tags/git/</loc>
-    <lastmod>2018-10-30T19:33:33+00:00</lastmod>
+    <lastmod>2019-01-09T19:33:33+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
