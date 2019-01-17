@@ -6,10 +6,34 @@
     <description>Recent content in 前端周刊 on Alili</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 11 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alili.tech/tags/%E5%89%8D%E7%AB%AF%E5%91%A8%E5%88%8A/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Alili Weekly 前端周刊 第十六期</title>
+      <link>https://alili.tech/archive/6kesofq8r0w/</link>
+      <pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://alili.tech/archive/6kesofq8r0w/</guid>
+      <description>一篇文章解决 npm 私有包频繁开发调试 npm 包管理的诸多问题，主要是业务初期版本号快速增长导致的：版本号过多，版本号传递过程中的繁琐以及组件库反复安装的痛苦，本文将着重解决这三个问题。
+奇舞推荐,NPM
+使用 Rust + WebAssembly 编写 crc32 一篇非常完整的 WebAssembly 教程。
+JavaScript,WebAssembly,算法
+关于 video 播放的新探索 浏览器对 MediaSource 对象的支持让 JavaScript 对 video 有了更大的操纵空间。让我们看看作者 video 结合 MediaSource 做了些什么吧。
+MediaSource,HTML5,Video,JavaScript
+如何在设计流程中融入动画 “微妙地使用 UX 动画是关键，但专注地帮助用户实现目标更加重要。”
+UX,动画,设计
+iOS 设备的常见差异化设计 一些应用为了保证 iPad 端的用户体验，在应用框架层的设计上与 iPhone 端存在一定的差异化。这些差异化设计符合 iOS 人机界面指南所描述的界面设计三大要点的：导航、视图、控件。
+设计,用户体验
+服务器上如何 Node 多版本共存 本文介绍了一套可以完美解决非 Docker 情况下 Node 多版本共存问题的方案。
+Node
+微信小程序的下一步：支持 NPM、小程序云、可视化编程、支持分包 微信公布了面向开发者的技术规划，内容主要包括小程序技术能力与规划、小程序生态体系、小程序性能优化三个方面。
+小程序
+从设计师的角度看 Redux 你是否知道 Redux 的真正威力远不止状态管理吗？你是否想要了解 Redux 的工作原理？让我们来深入介绍 Redux 到底能做些什么？为什么它是这样设计的？它的缺点有哪些？以及它与设计有哪些关联？
+Redux</description>
+    </item>
     
     <item>
       <title>Alili Weekly 前端周刊 第十五期</title>
