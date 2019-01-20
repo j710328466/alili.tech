@@ -1,5 +1,455 @@
 [
     {
+        "uri": "https://alili.tech/archive/2jht7yu2u9e/",
+        "title": "30 个方便的 Bash shell 别名",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/iksbk0p5k29/",
+        "title": "7 个使用 bcc/BPF 的性能分析神器",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/lxcn150vbf/",
+        "title": "Bash 脚本：正则表达式基础篇",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/7armht6r6ju/",
+        "title": "GIT 命令“从初学到专业”完整进阶指南",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/9ymbz342l8n/",
+        "title": "Glitch：可以让你立即写出有趣的小型网站",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/avsi857wwur/",
+        "title": "LinchPin：一个使用 Ansible 的简化的编配工具",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/uy98iv4ly7b/",
+        "title": "Linux Journal 停止发行",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/ufww9fdfh5k/",
+        "title": "Linux 上如何禁用 USB 存储",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/5uh7scbq9g/",
+        "title": "Linux 下如何修改用户名（同时修改用户组名和家目录）",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/vzsx3b6ueef/",
+        "title": "OnionShare：匿名共享文件",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/6jdrdy0l53n/",
+        "title": "Python 版的 Nmon 分析器：让你远离 excel 宏",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/lp564ec6s7d/",
+        "title": "Torrents（种子）：你需要知道的一切事情",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/qeeblf3kzq/",
+        "title": "UC 浏览器最大的问题",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/2dcqdgdjn8y/",
+        "title": "ftrace：跟踪你的内核函数！",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/wkpk6pntmj/",
+        "title": "为什么 Kubernetes 很酷",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/e860kl6i0oo/",
+        "title": "互联网协议正在发生变化",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/zhkd5kwgc8r/",
+        "title": "什么是僵尸进程，如何找到并杀掉僵尸进程？",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/n31ioxcphwq/",
+        "title": "什么是防火墙？",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/3cnl5jti3rp/",
+        "title": "介绍 GitHub 上的安全警报",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/92j4g61g2z/",
+        "title": "从 ISO 和在线仓库创建一个 Yum 仓库",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/ooa3jpnf0gp/",
+        "title": "使用 Showterm 录制和分享终端会话",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/itmonshhhea/",
+        "title": "使用 TLS 加密保护 VNC 服务器的简单指南",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/qxkokr6ra5h/",
+        "title": "使用 Vi/Vim 编辑器：基础篇",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/5j6dnp8ps4u/",
+        "title": "使用 Vi/Vim 编辑器：高级概念",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/sdsufmaz19c/",
+        "title": "使用 VirtualBox 创建 Vagrant Boxes 的完全指南",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/1csjhl9eqoi/",
+        "title": "使用 fdisk 和 fallocate 命令创建交换分区",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/5greqjtll8g/",
+        "title": "使用 groff 编写 man 手册页",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/si2dth9lq1/",
+        "title": "使用 iftop 命令监控网络带宽",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/ts1n6vf9kwf/",
+        "title": "修复 Linux / Unix / OS X / BSD 系统控制台上的显示乱码",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/nwtxfjkgeqi/",
+        "title": "关于 Linux 页面表隔离补丁的神秘情况",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/gykqld63vs/",
+        "title": "匿名上网：学习在 Linux 上安装 TOR 网络",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/lpi442o0wne/",
+        "title": "回复：块层介绍第一部分 - 块 I/O 层",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/gdvph0cb85b/",
+        "title": "在 2018 年最值得去学习的编程语言",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/ijtfh1l80pa/",
+        "title": "在 Linux 上恢复一个损坏的 USB 设备至初始状态",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/ftauj86u1m/",
+        "title": "在 Linux 上检查网络连接的更多方法",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/7c6vqqylux2/",
+        "title": "在 Linux 上检测 IDE/SATA SSD 硬盘的传输速度",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/1a61knsqubo/",
+        "title": "在 Linux 启动或重启时执行命令与脚本",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/sksi48h8jd/",
+        "title": "在 Linux 字符界面中获取天气预报",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/n7ay2k3se2l/",
+        "title": "在 Ubuntu 上体验 LXD 容器",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/dohtwfnxq16/",
+        "title": "在 Xfce 会话中保存窗口的位置",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/hkmb0199m1/",
+        "title": "如何使用 lftp 来加速 Linux/UNIX 上的 ftp/https 下载速度",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/vaysdy6e31e/",
+        "title": "如何使用 pdfgrep 从终端搜索 PDF 文件",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/9pkl97ixz4/",
+        "title": "如何修复 WordPress 中的 HTTP 错误",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/ewp5y2dfn2/",
+        "title": "如何在 Bash 中抽取子字符串",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/7lyvmas7pjd/",
+        "title": "如何在 Linux shell 中找出所有包含指定文本的文件",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/e7ac2ct29mu/",
+        "title": "如何在 Linux 上安装友好的交互式 shell：Fish",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/welt98mkhp/",
+        "title": "如何在 Linux 使用文件压缩",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/2dzdbrnmh2v/",
+        "title": "如何在 Linux 系统查询机器最近重启时间",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/6j2m6njhnt4/",
+        "title": "如何在 Linux/Unix/Windows 中发现隐藏的进程和端口",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/p69fqotuq7c/",
+        "title": "如何在 Ubuntu 上使用 ZFS 文件系统",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/u1xucgfz69/",
+        "title": "如何解决 check_mk 出现 “Cannot fetch deployment URL via curl” 的错误",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/gv8m5as8t2i/",
+        "title": "如何让 curl 命令通过代理访问",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/1ynx7pagvvei/",
+        "title": "如何配置一个小朋友使用的 Linux",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/walps7xlkn/",
+        "title": "将安装了 CentOS/RHEL 6/7 的机器转变成路由器",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/vu5d363lynh/",
+        "title": "并发服务器（四）：libuv",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/xqmia1o0poq/",
+        "title": "当 CPU 空闲时它都在做什么？",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/ykrz1e7kme/",
+        "title": "循序渐进学习如何在 MariaDB 中配置主从复制",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/jhekj5zpwl/",
+        "title": "怎么使用 SVG 作为一个图像占位符",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/0vxvnczo4tc/",
+        "title": "我在 Twitch 平台直播编程的经验",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/2nimwxftsvr/",
+        "title": "我是被 “root@notty” 黑了吗？",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/pg9k6wj3u6/",
+        "title": "无需 root 实现在 Android 设备上运行 Linux",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/5lu62ehvxk6/",
+        "title": "最重要的 Firefox 命令行选项",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/05t4kmtq4kgb/",
+        "title": "有人试图挽救 Ubuntu Unity ，将其做为官方分支",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/0wso8cru532/",
+        "title": "检查 Linux 文件系统中的错误：通过案例学习 FSCK 命令",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/czh8ye12e3/",
+        "title": "检查 Linux 系统上的网络连接",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/nld06ftar1/",
+        "title": "检查系统和硬件信息的命令",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/dagwxuophhg/",
+        "title": "每个系统管理员都要知道的 30 个 Linux 系统监控工具",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/rch68e1crso/",
+        "title": "用 Apache 服务器模块保护您的网站免受应用层 DOS 攻击",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/6dtzin0so6e/",
+        "title": "用命令行查看比特币等加密货币的价格",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/ei6gr9usji9/",
+        "title": "直接保存文件至 Google Drive 并用十倍的速度下载回来",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/gr89zfgkyjk/",
+        "title": "程序员如何学习编码",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/1lry4trea1d/",
+        "title": "精通 Linux 上的文件搜索",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/rlr3v3ughtf/",
+        "title": "解决 Linux 和 Windows 双启动带来的时间同步问题",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/dohrzqvt4je/",
+        "title": "谨慎使用 Linux find 命令",
+        "tags": [],
+        "description": ""
+    },
+    {
+        "uri": "https://alili.tech/archive/3bwdghiimhw/",
+        "title": "通过实例学习 tcpdump 命令",
+        "tags": [],
+        "description": ""
+    },
+    {
         "uri": "https://alili.tech/archive/oj0yuf8a0be/",
         "title": "10倍性能提升：优化一个静态网站",
         "tags": [],
